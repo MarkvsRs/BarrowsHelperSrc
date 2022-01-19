@@ -18,6 +18,10 @@ var refreshrate = 100
 var storedrefreshrate = 100
 var interval 
 var justleft = 0 
+var tunnelglbl
+var tunnelglbl2
+var regex = "([^\/]+$)"
+var regex2 = "/^(.*?)Dead/"
 
 //loads all images as raw pixel data async, images have to be saved as *.data.PNG
 //this also takes care of metadata headers in the image that make browser load the image
@@ -149,6 +153,12 @@ export function changerefresh(refresh) {
 	return;
 };
 
+export function TunnelSelect(tunnel)
+{
+	//tunnelglbl = tunnel.src.match(regex)
+	//tunnelglbl2  = tunnelglbl[0].match(regex2)
+	return;
+}
 //Webpage calls this function here.
 export function start() {
 	
@@ -160,7 +170,9 @@ export function start() {
 
 function tick() {
    	//grab the rs window capture
-	 							  console.log(refreshrate)
+	   
+	//console.log(tunnelglbl2)
+	//console.log(tunnelglbl2)
 	img = a1lib.captureHoldFullRs();
 	//run at barrows check/reset brother list. 
 	atbarrows(img);

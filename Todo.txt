@@ -1,0 +1,2 @@
+update readme to include alt1 permissions
+Add green images so u can select which tunnel
