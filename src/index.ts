@@ -14,7 +14,9 @@ var img
 var imgdoor
 var brocount = 0
 var toKill  = 8
-
+var refreshrate = 100
+var storedrefreshrate = 100
+var interval 
 //loads all images as raw pixel data async, images have to be saved as *.data.PNG
 //this also takes care of metadata headers in the image that make browser load the image
 //with slightly wrong colors
@@ -48,13 +50,6 @@ var doorimg = a1lib.ImageDetect.webpackImages(
 var slainimg = a1lib.ImageDetect.webpackImages(
 	{
 		slain: require("./Misc/Slain.data.PNG")
-	}
-);
-
-
-var brotherAllimg = a1lib.ImageDetect.webpackImages(
-	{
-		slain: require("./Brothers/AllBros.data.PNG")
 	}
 );
 
@@ -105,6 +100,7 @@ var brotherListselect = {
 	Linza: 	'Linza'
 	}
 
+
 var brotherListnonselect = {}
 
 function ObjectLength( object ) {
@@ -138,21 +134,31 @@ export function changesettings(toggle) {
 		brotherListnonselect[toggle.id] = [toggle.id];
 
 		toKill = ObjectLength(brotherListselect)
-	}				
+	}	
+	return;	
 };
 
+export function changerefresh(refresh) {
+	storedrefreshrate = refresh.value
+	refreshrate = storedrefreshrate
+	
+	clearInterval(interval)
+	start()
+	return;
+};
 
 //Webpage calls this function here.
 export function start() {
 	
 	//Set effective refresh rate (todo, customise this rate)
-    setInterval(tick,100); 
+    interval = setInterval(tick,refreshrate); 
 	    
 	tick(); 
 }
 
 function tick() {
    	//grab the rs window capture
+	 							  console.log(refreshrate)
 	img = a1lib.captureHoldFullRs();
 	//run at barrows check/reset brother list. 
 	atbarrows(img);
@@ -175,6 +181,15 @@ function atbarrows(img: ImgRef){
 				//reset brocount (used so that the count doesn't go out of control after each run/tele out)	
 				brocount = 0;
 
+				if (refreshrate < 100)
+				{
+					refreshrate = storedrefreshrate
+					
+					clearInterval(interval)
+					start()
+					return;
+				}
+
 				for (const [key] of Object.entries(brotherimgs)) {						
 					//blank out brother images
 					(document.getElementById(`${key}HTMLimg`) as HTMLImageElement).src = `./TooltipHeads/${key}Dead.PNG`
@@ -189,6 +204,8 @@ function atbarrows(img: ImgRef){
 			
 		}		
 	}
+	
+	return;
 }
 
 function findBrothers(img: ImgRef) {
@@ -266,6 +283,8 @@ function findBrothers(img: ImgRef) {
 	{
 		var text = document.getElementById('Status').textContent = "All brothers have been slain, go and loot the chest.";
 	}	
+	
+	return;
 }	
 
 
@@ -274,6 +293,16 @@ function doorLock(img:ImgRef){
 	//only run if door lock window is on screen, saves on performance
 	if (window.alt1) {
 		if (Doorloc.length != 0) {
+
+			if (refreshrate != 50)
+				{
+					refreshrate = 50
+					clearInterval(interval)
+					start()
+					return;
+				}
+			
+					
 			img = a1lib.captureHoldFullRs();
 			getDiffCoTo(img) //remove when putting consisten check back in
 			img = a1lib.captureHoldFullRs();
@@ -281,10 +310,19 @@ function doorLock(img:ImgRef){
 			img = a1lib.captureHoldFullRs();
 			getDiffCT(img) //remove when putting consisten check back in
 			
-		} 	
+		} 
+		if(Doorloc.length ==0 && refreshrate == 50)
+		{
+			refreshrate = storedrefreshrate
+					
+					clearInterval(interval)
+					start()
+					return;
+		}
 	}
 	
 	
+	return;
 }
 
 function getDiffCoTo(img:ImgRef){
@@ -364,6 +402,8 @@ function getDiffCoTo(img:ImgRef){
 			}
 		}
 	}
+	
+	return;
 }
 
 
@@ -444,6 +484,8 @@ function getDiffSq(img:ImgRef){
 			}
 		}
 	}
+	
+	return;
 }
 
 
@@ -524,6 +566,8 @@ function getDiffCT(img:ImgRef){
 			}
 		}
 	}
+	
+	return;
 }
 
 if (window.alt1) {

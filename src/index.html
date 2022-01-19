@@ -200,11 +200,20 @@
 									</tr>
 
 								</table>
-
-
-
-
 							</div>
+						</div>
+						<br/>
+						<br/>
+						
+						<div class="row">
+							<div class="col" title="Changes the refresh rate of the image checking. Lower is better for more instant detection, but also costs more cpu. Default 100, min 100, max 1000, units are milliseconds" style="margin-top:-7px;">
+								<p>Refresh rate (in ms).<br> Default 100<br> Min 100<br> Max 1000</p>
+							</div>
+							<div class="col">
+								<br/>
+								<input class="input-width" type="number" id="refreshratehtml" name="refreshratehtml" placeholder="100" min="100" max="1000" step="50" onchange="TEST.changerefresh(this);" >
+							</div>
+
 						</div>
 					</div>
 				</div>
