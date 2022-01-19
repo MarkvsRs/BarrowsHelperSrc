@@ -13,8 +13,9 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
+          npm install resemblejs --no-optional
+          npm install ts-node
           npm run build
-
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.2.2
         with:
