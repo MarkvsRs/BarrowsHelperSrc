@@ -3562,6 +3562,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "changesettings": () => (/* binding */ changesettings),
 /* harmony export */   "changerefresh": () => (/* binding */ changerefresh),
+/* harmony export */   "TunnelSelect": () => (/* binding */ TunnelSelect),
 /* harmony export */   "start": () => (/* binding */ start)
 /* harmony export */ });
 /* harmony import */ var _alt1_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js");
@@ -3584,6 +3585,10 @@ var refreshrate = 100;
 var storedrefreshrate = 100;
 var interval;
 var justleft = 0;
+var tunnelglbl;
+var tunnelglbl2;
+var regex = "([^\/]+$)";
+var regex2 = "/^(.*?)Dead/";
 //loads all images as raw pixel data async, images have to be saved as *.data.PNG
 //this also takes care of metadata headers in the image that make browser load the image
 //with slightly wrong colors
@@ -3684,6 +3689,11 @@ function changerefresh(refresh) {
     return;
 }
 ;
+function TunnelSelect(tunnel) {
+    //tunnelglbl = tunnel.src.match(regex)
+    //tunnelglbl2  = tunnelglbl[0].match(regex2)
+    return;
+}
 //Webpage calls this function here.
 function start() {
     //Set effective refresh rate (todo, customise this rate)
@@ -3692,7 +3702,8 @@ function start() {
 }
 function tick() {
     //grab the rs window capture
-    console.log(refreshrate);
+    //console.log(tunnelglbl2)
+    //console.log(tunnelglbl2)
     img = _alt1_base__WEBPACK_IMPORTED_MODULE_0__.captureHoldFullRs();
     //run at barrows check/reset brother list. 
     atbarrows(img);
