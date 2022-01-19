@@ -3583,7 +3583,6 @@ var toKill = 8;
 var refreshrate = 100;
 var storedrefreshrate = 100;
 var interval;
-var justleft = 0;
 //loads all images as raw pixel data async, images have to be saved as *.data.PNG
 //this also takes care of metadata headers in the image that make browser load the image
 //with slightly wrong colors
@@ -3710,10 +3709,8 @@ function atbarrows(img) {
             //brotherList = fullbrotherList
             //reset brocount (used so that the count doesn't go out of control after each run/tele out)	
             brocount = 0;
-            //whilst not at barrows shove the refresh rate down a tonne to save on cpu and idel players
-            if (refreshrate < 5000) {
-                refreshrate = 5000;
-                justleft = 1;
+            if (refreshrate < 100) {
+                refreshrate = storedrefreshrate;
                 clearInterval(interval);
                 start();
                 return;
@@ -3724,14 +3721,6 @@ function atbarrows(img) {
             }
         }
         if (loc.length != 0) {
-            //whilst just returning to barrows restore the refresh rate to custom
-            if (justleft == 1 && refreshrate == 5000) {
-                refreshrate = storedrefreshrate;
-                justleft = 0;
-                clearInterval(interval);
-                start();
-                return;
-            }
             //run brother finder
             findBrothers(img);
             //run puzzle
