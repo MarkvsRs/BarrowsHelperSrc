@@ -2119,6 +2119,16 @@ module.exports=(__webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/bas
 
 /***/ }),
 
+/***/ "./Misc/Chest.data.PNG":
+/*!*****************************!*\
+  !*** ./Misc/Chest.data.PNG ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports=(__webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js").ImageDetect.imageDataFromBase64)("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")
+
+/***/ }),
+
 /***/ "./Misc/DoorLock.data.PNG":
 /*!********************************!*\
   !*** ./Misc/DoorLock.data.PNG ***!
@@ -3587,8 +3597,11 @@ var interval;
 var justleft = 0;
 var tunnelglbl;
 var tunnelglbl2;
+var tunnelglbl3;
+var tunnelglbl4;
 var regex = "([^\/]+$)";
-var regex2 = "/^(.*?)Dead/";
+var regex2 = "^.*(?=(Deselect))";
+var regex3 = "^.*(?=(\.PNG))";
 //loads all images as raw pixel data async, images have to be saved as *.data.PNG
 //this also takes care of metadata headers in the image that make browser load the image
 //with slightly wrong colors
@@ -3606,6 +3619,9 @@ var puzzleimgsCT = _alt1_base__WEBPACK_IMPORTED_MODULE_0__.ImageDetect.webpackIm
 });
 var doorimg = _alt1_base__WEBPACK_IMPORTED_MODULE_0__.ImageDetect.webpackImages({
     door: __webpack_require__(/*! ./Misc/DoorLock.data.PNG */ "./Misc/DoorLock.data.PNG")
+});
+var chestimg = _alt1_base__WEBPACK_IMPORTED_MODULE_0__.ImageDetect.webpackImages({
+    chest: __webpack_require__(/*! ./Misc/Chest.data.PNG */ "./Misc/Chest.data.PNG")
 });
 var slainimg = _alt1_base__WEBPACK_IMPORTED_MODULE_0__.ImageDetect.webpackImages({
     slain: __webpack_require__(/*! ./Misc/Slain.data.PNG */ "./Misc/Slain.data.PNG")
@@ -3690,8 +3706,22 @@ function changerefresh(refresh) {
 }
 ;
 function TunnelSelect(tunnel) {
-    //tunnelglbl = tunnel.src.match(regex)
-    //tunnelglbl2  = tunnelglbl[0].match(regex2)
+    //If the image was a dead one
+    if (tunnel.src.match("Deselect")) {
+        tunnelglbl = tunnel.src.match(regex);
+        tunnelglbl2 = tunnelglbl[0].match(regex3);
+        tunnelglbl4 = tunnelglbl2[0].match(regex2);
+        tunnelglbl3 = tunnelglbl4[0]; //just the brother name
+    }
+    else if (tunnel.src.match("Tunnel")) {
+        tunnelglbl3 = "None";
+    }
+    //If the image was an alive one
+    else {
+        tunnelglbl = tunnel.src.match(regex);
+        tunnelglbl2 = tunnelglbl[0].match(regex3);
+        tunnelglbl3 = tunnelglbl2[0]; //just the brother name}
+    }
     return;
 }
 //Webpage calls this function here.
@@ -3702,11 +3732,10 @@ function start() {
 }
 function tick() {
     //grab the rs window capture
-    //console.log(tunnelglbl2)
-    //console.log(tunnelglbl2)
     img = _alt1_base__WEBPACK_IMPORTED_MODULE_0__.captureHoldFullRs();
     //run at barrows check/reset brother list. 
     atbarrows(img);
+    chest(img);
 }
 function atbarrows(img) {
     //Check Brothers slain list header
@@ -3731,7 +3760,10 @@ function atbarrows(img) {
             }
             for (const [key] of Object.entries(brotherimgs)) {
                 //blank out brother images
-                document.getElementById(`${key}HTMLimg`).src = `./TooltipHeads/${key}Dead.PNG`;
+                if (!key.includes(tunnelglbl3)) //dont overwirte selected tunnel if player has selected it
+                 {
+                    document.getElementById(`${key}HTMLimg`).src = `./TooltipHeads/${key}Dead.PNG`;
+                }
             }
         }
         if (loc.length != 0) {
@@ -3747,6 +3779,7 @@ function atbarrows(img) {
             findBrothers(img);
             //run puzzle
             doorLock(img);
+            chest(img);
         }
     }
     return;
@@ -3759,13 +3792,19 @@ function findBrothers(img) {
         var broloc = img.findSubimage(brotherimgs[key]);
         if (broloc.length == 0) {
             //Display coloured version of the brother image, as they are not dead yet
-            document.getElementById(`${key}HTMLimg`).src = `./TooltipHeads/${key}.PNG`;
+            if (!key.includes(tunnelglbl3)) //dont overwirte selected tunnel if player has selected it
+             {
+                document.getElementById(`${key}HTMLimg`).src = `./TooltipHeads/${key}.PNG`;
+            }
         }
     }
     //loop through Non dead bro's and overwirte iwth Red image if deselected	
     for (const [key] of Object.entries(brotherList)) {
         for (const [key2] of Object.entries(brotherListnonselect)) {
-            document.getElementById(`${key2}HTMLimg`).src = `./TooltipHeads/${key2}Deselect.PNG`; //shove this before dead bu after alive. **************
+            if (!key2.includes(tunnelglbl3)) //dont overwirte selected tunnel if player has selected it
+             {
+                document.getElementById(`${key2}HTMLimg`).src = `./TooltipHeads/${key2}Deselect.PNG`;
+            }
         }
     }
     //loop through Non dead bro's and overwrite with dead image if dead (even if deselected)
@@ -3775,8 +3814,11 @@ function findBrothers(img) {
         if (broloc.length != 0) {
             //increase kill counter
             brocount += 1;
-            //replace image with greyed out version if brother name found in list
-            document.getElementById(`${key}HTMLimg`).src = `./TooltipHeads/${key}Dead.PNG`;
+            if (!key.includes(tunnelglbl3)) //dont overwirte selected tunnel if player has selected it
+             {
+                //replace image with greyed out version if brother name found in list
+                document.getElementById(`${key}HTMLimg`).src = `./TooltipHeads/${key}Dead.PNG`;
+            }
             //remove relevant brother from brother list - used to display which brother is left when showing tunnel location
             delete brotherList[key];
         }
@@ -3804,7 +3846,12 @@ function findBrothers(img) {
             var text = document.getElementById('Status').textContent = brocount + " brothers slain, enter the tunnel at " + Object.keys(brotherList) + "'s tomb";
         }
         else {
-            var text = document.getElementById('Status').textContent = brocount + " brothers slain, so tunnel location unknown. Possibilities: " + Object.keys(brotherList).filter((key) => !key.includes('Linza'));
+            if (tunnelglbl3 == "None" || tunnelglbl3 == undefined) {
+                var text = document.getElementById('Status').textContent = brocount + " brothers slain, so tunnel location unknown. Possibilities: " + Object.keys(brotherList).filter((key) => !key.includes('Linza'));
+            }
+            else {
+                var text = document.getElementById('Status').textContent = brocount + " brothers slain, when ready, enter the tunnel at " + tunnelglbl3 + "'s tomb";
+            }
         }
     }
     if (brocount == 8) {
@@ -4021,6 +4068,16 @@ function getDiffCT(img) {
         }
     }
     return;
+}
+function chest(img) {
+    var chestloc = img.findSubimage(chestimg.chest);
+    //only run if door lock window is on screen, saves on performance
+    if (window.alt1) {
+        if (chestloc.length != 0) {
+            tunnelglbl3 = "None";
+            brocount = 8;
+        }
+    }
 }
 if (window.alt1) {
     alt1.identifyAppUrl("./appconfig.json");
