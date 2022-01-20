@@ -1,2 +1,4 @@
 update readme to include alt1 permissions
-Add green images so u can select which tunnel
+See if all alt1 permissions can be presented on initial add
+Default size set
+Store stuff permanently. 
