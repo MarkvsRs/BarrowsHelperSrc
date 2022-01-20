@@ -5,6 +5,7 @@ import { ImgRef } from "@alt1/base";
 //import { lookup } from "dns";
 //import { stringify } from "querystring";
 import   * as resemble from "resemblejs";
+import { ChainedSet } from "webpack-chain";
 
 //tell webpack to add index.html and appconfig.json to output
 
@@ -20,8 +21,13 @@ var interval
 var justleft = 0 
 var tunnelglbl
 var tunnelglbl2
+var tunnelglbl3
+var tunnelglbl4
 var regex = "([^\/]+$)"
-var regex2 = "/^(.*?)Dead/"
+var regex2 = "^.*(?=(Deselect))"
+var regex3 = "^.*(?=(\.PNG))"
+
+
 
 //loads all images as raw pixel data async, images have to be saved as *.data.PNG
 //this also takes care of metadata headers in the image that make browser load the image
@@ -50,6 +56,12 @@ var puzzleimgsCT = a1lib.ImageDetect.webpackImages(
 var doorimg = a1lib.ImageDetect.webpackImages(
 	{
 	door: require("./Misc/DoorLock.data.PNG")
+	}
+);
+
+var chestimg = a1lib.ImageDetect.webpackImages(
+	{
+	chest: require("./Misc/Chest.data.PNG")
 	}
 );
 
@@ -155,8 +167,25 @@ export function changerefresh(refresh) {
 
 export function TunnelSelect(tunnel)
 {
-	//tunnelglbl = tunnel.src.match(regex)
-	//tunnelglbl2  = tunnelglbl[0].match(regex2)
+	//If the image was a dead one
+	if (tunnel.src.match("Deselect"))
+	{
+		tunnelglbl = tunnel.src.match(regex)
+		tunnelglbl2  = tunnelglbl[0].match(regex3)
+		tunnelglbl4  = tunnelglbl2[0].match(regex2)
+		tunnelglbl3 = tunnelglbl4[0] //just the brother name
+	}
+	else if (tunnel.src.match("Tunnel"))
+	{
+		tunnelglbl3 = "None"
+	}
+	//If the image was an alive one
+	else
+	{
+		tunnelglbl = tunnel.src.match(regex)
+		tunnelglbl2  = tunnelglbl[0].match(regex3)
+		tunnelglbl3 = tunnelglbl2[0] //just the brother name}
+	}
 	return;
 }
 //Webpage calls this function here.
@@ -171,11 +200,11 @@ export function start() {
 function tick() {
    	//grab the rs window capture
 	   
-	//console.log(tunnelglbl2)
-	//console.log(tunnelglbl2)
 	img = a1lib.captureHoldFullRs();
 	//run at barrows check/reset brother list. 
 	atbarrows(img);
+	
+	chest(img);
 }
 
 
@@ -208,7 +237,10 @@ function atbarrows(img: ImgRef){
 
 				for (const [key] of Object.entries(brotherimgs)) {						
 					//blank out brother images
-					(document.getElementById(`${key}HTMLimg`) as HTMLImageElement).src = `./TooltipHeads/${key}Dead.PNG`
+					if (!key.includes(tunnelglbl3)) //dont overwirte selected tunnel if player has selected it
+					{
+						(document.getElementById(`${key}HTMLimg`) as HTMLImageElement).src = `./TooltipHeads/${key}Dead.PNG`
+					}
 				}
 		}
 		if (loc.length != 0){
@@ -229,6 +261,7 @@ function atbarrows(img: ImgRef){
 			//run puzzle
 			doorLock(img);
 			
+			chest(img);
 
 
 
@@ -236,6 +269,7 @@ function atbarrows(img: ImgRef){
 		
 	}
 	
+
 	return;
 }
 
@@ -250,15 +284,21 @@ function findBrothers(img: ImgRef) {
 					
 		if (broloc.length == 0){
 			//Display coloured version of the brother image, as they are not dead yet
-				(document.getElementById(`${key}HTMLimg`) as HTMLImageElement).src = `./TooltipHeads/${key}.PNG`
+			if (!key.includes(tunnelglbl3)) //dont overwirte selected tunnel if player has selected it
+				{
+					(document.getElementById(`${key}HTMLimg`) as HTMLImageElement).src = `./TooltipHeads/${key}.PNG`
+				}
 		}	
 	}
 	//loop through Non dead bro's and overwirte iwth Red image if deselected	
 	for (const [key] of Object.entries(brotherList)) 
 	{
 		for (const [key2] of Object.entries(brotherListnonselect)) {
-		
-			(document.getElementById(`${key2}HTMLimg`) as HTMLImageElement).src = `./TooltipHeads/${key2}Deselect.PNG` //shove this before dead bu after alive. **************
+			
+			if (!key2.includes(tunnelglbl3)) //dont overwirte selected tunnel if player has selected it
+				{
+					(document.getElementById(`${key2}HTMLimg`) as HTMLImageElement).src = `./TooltipHeads/${key2}Deselect.PNG` 
+				}
 					
 		}
 	}
@@ -270,9 +310,11 @@ function findBrothers(img: ImgRef) {
 		if (broloc.length != 0) {
 			//increase kill counter
 			brocount += 1;
-			//replace image with greyed out version if brother name found in list
-			(document.getElementById(`${key}HTMLimg`) as HTMLImageElement).src = `./TooltipHeads/${key}Dead.PNG`
-							
+			if (!key.includes(tunnelglbl3)) //dont overwirte selected tunnel if player has selected it
+				{
+					//replace image with greyed out version if brother name found in list
+					(document.getElementById(`${key}HTMLimg`) as HTMLImageElement).src = `./TooltipHeads/${key}Dead.PNG`
+				}
 			//remove relevant brother from brother list - used to display which brother is left when showing tunnel location
 			delete brotherList[key];			
 		} 
@@ -291,6 +333,7 @@ function findBrothers(img: ImgRef) {
 	
 	
 	//display brothers killed/tomb location/go loot the chest
+
 	if (brocount ==1)
 	{
 		var text = document.getElementById('Status').textContent = brocount +  " brothers slain, Keep going!";
@@ -299,17 +342,27 @@ function findBrothers(img: ImgRef) {
 	{
 		var text = document.getElementById('Status').textContent = brocount + " brothers slain, Keep going!";
 	}
-	if (brocount >= toKill-1 && toKill != 0)
-	{
-		if(ObjectLength(brotherList) == 1)
-		{//only show tunnel if all 8 killed
-			var text = document.getElementById('Status').textContent = brocount  +" brothers slain, enter the tunnel at " + Object.keys(brotherList)  +"'s tomb";
-		}
-		else
+
+		if (brocount >= toKill-1 && toKill != 0)
 		{
-			var text = document.getElementById('Status').textContent = brocount  +" brothers slain, so tunnel location unknown. Possibilities: " + Object.keys(brotherList).filter((key) => !key.includes('Linza'));
+			if(ObjectLength(brotherList) == 1)
+			{//only show tunnel if all 8 killed
+				var text = document.getElementById('Status').textContent = brocount  +" brothers slain, enter the tunnel at " + Object.keys(brotherList)  +"'s tomb";
+			}
+			else
+			{ 
+				if(tunnelglbl3 == "None" ||tunnelglbl3 == undefined)
+				{
+					var text = document.getElementById('Status').textContent = brocount  +" brothers slain, so tunnel location unknown. Possibilities: " + Object.keys(brotherList).filter((key) => !key.includes('Linza'));
+				}
+				else{
+					var text = document.getElementById('Status').textContent = brocount  +" brothers slain, when ready, enter the tunnel at " + tunnelglbl3  +"'s tomb";
+				}
+			}
 		}
-	}
+	
+	
+
 	if (brocount == 8)
 	{
 		var text = document.getElementById('Status').textContent = "All brothers have been slain, go and loot the chest.";
@@ -599,6 +652,21 @@ function getDiffCT(img:ImgRef){
 	}
 	
 	return;
+}
+
+function chest(img) //finds reward chest, used to reset tunnel green image
+{
+	var chestloc = img.findSubimage(chestimg.chest);	
+	
+	//only run if door lock window is on screen, saves on performance
+	if (window.alt1) {
+		if (chestloc.length != 0) {
+			tunnelglbl3 = "None"
+			brocount = 8
+		}
+	}
+
+
 }
 
 if (window.alt1) {
