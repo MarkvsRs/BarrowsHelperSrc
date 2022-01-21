@@ -3740,7 +3740,8 @@ function TunnelSelect(tunnel) {
 function start() {
     //only run the once, and only if the storage isnt empty, otherwise stick with default
     if (pageload == 0) {
-        if (localStorage.Localstoragerefreshrate.length > 0) //only change if the user has set a refresh rate
+        console.log(localStorage.getItem("Localstoragerefreshrate"));
+        if (localStorage.getItem("Localstoragerefreshrate") !== null) //only change if the user has set a refresh rate
          {
             //Reads from stroage refresh rate, update it to be refresh rate.
             storedrefreshrate = parseInt(localStorage.Localstoragerefreshrate);
@@ -3748,7 +3749,7 @@ function start() {
             refreshrate = storedrefreshrate;
         }
         //need to sort brother lists, and set red images in here.
-        if (localStorage.LocalStorageBrotherNonSelectList.length > 0) {
+        if (localStorage.getItem("LocalStorageBrotherNonSelectList") !== null) {
             brotherListnonselect = JSON.parse(localStorage.getItem("LocalStorageBrotherNonSelectList"));
             for (const [key2] of Object.entries(brotherListnonselect)) {
                 if (!key2.includes(tunnelglbl3)) //dont overwirte selected tunnel if player has selected it
@@ -3759,8 +3760,10 @@ function start() {
             }
         }
         //Setup brotherListSelect with stored info
-        brotherListselect = JSON.parse(localStorage.getItem("LocalStorageBrotherSelectList"));
-        if (localStorage.LocalStorageTunnel.length > 0 && localStorage.getItem("LocalStorageTunnel") != "None") {
+        if (localStorage.getItem("LocalStorageBrotherSelectList") !== null) {
+            brotherListselect = JSON.parse(localStorage.getItem("LocalStorageBrotherSelectList"));
+        }
+        if (localStorage.getItem("LocalStorageTunnel") !== null && localStorage.getItem("LocalStorageTunnel") != "None") {
             tunnelglbl3 = localStorage.getItem("LocalStorageTunnel");
             document.getElementById(`${tunnelglbl3}HTMLimg`).src = `./TooltipHeads/${tunnelglbl3}HTMLimgTunnel.PNG`;
         }

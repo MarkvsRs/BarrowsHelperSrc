@@ -1,6 +1,1 @@
-update readme to include alt1 permissions
-See if all alt1 permissions can be presented on initial add
-Default size set
-
-
 Other app - bolt selector
