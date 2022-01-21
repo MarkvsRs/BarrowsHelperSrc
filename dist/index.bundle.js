@@ -3581,8 +3581,6 @@ __webpack_require__.r(__webpack_exports__);
 //alt1 base libs, provides all the commonly used methods for image matching and capture
 //also gives your editor info about the window.alt1 api
 
-//import { lookup } from "dns";
-//import { stringify } from "querystring";
 
 //tell webpack to add index.html and appconfig.json to output
 __webpack_require__(/*! !file-loader?name=[name].[ext]!./index.html */ "../node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./index.html");
@@ -3597,11 +3595,12 @@ var interval;
 var justleft = 0;
 var tunnelglbl;
 var tunnelglbl2;
-var tunnelglbl3;
+var tunnelglbl3 = "None";
 var tunnelglbl4;
 var regex = "([^\/]+$)";
 var regex2 = "^.*(?=(Deselect))";
 var regex3 = "^.*(?=(\.PNG))";
+var pageload = 0;
 //loads all images as raw pixel data async, images have to be saved as *.data.PNG
 //this also takes care of metadata headers in the image that make browser load the image
 //with slightly wrong colors
@@ -3686,6 +3685,9 @@ function changesettings(toggle) {
         //remove from ignore list
         delete brotherListnonselect[toggle.id];
         toKill = ObjectLength(brotherListselect);
+        //Set the localobjects for subsequent plugin loads
+        localStorage.setItem("LocalStorageBrotherSelectList", JSON.stringify(brotherListselect));
+        localStorage.setItem("LocalStorageBrotherNonSelectList", JSON.stringify(brotherListnonselect));
     }
     else {
         //remove relevant brother from list
@@ -3693,15 +3695,22 @@ function changesettings(toggle) {
         //add relevant brother to ignore list
         brotherListnonselect[toggle.id] = [toggle.id];
         toKill = ObjectLength(brotherListselect);
+        //Set the localobjects for subsequent plugin loads
+        localStorage.setItem("LocalStorageBrotherSelectList", JSON.stringify(brotherListselect));
+        localStorage.setItem("LocalStorageBrotherNonSelectList", JSON.stringify(brotherListnonselect));
     }
     return;
 }
 ;
 function changerefresh(refresh) {
-    storedrefreshrate = refresh.value;
-    refreshrate = storedrefreshrate;
-    clearInterval(interval);
-    start();
+    localStorage.setItem("Localstoragerefreshrate", refresh.value);
+    storedrefreshrate = parseInt(localStorage.Localstoragerefreshrate);
+    //storedrefreshrate = refresh.value
+    if (refreshrate != storedrefreshrate) {
+        refreshrate = storedrefreshrate;
+        clearInterval(interval);
+        start();
+    }
     return;
 }
 ;
@@ -3712,22 +3721,55 @@ function TunnelSelect(tunnel) {
         tunnelglbl2 = tunnelglbl[0].match(regex3);
         tunnelglbl4 = tunnelglbl2[0].match(regex2);
         tunnelglbl3 = tunnelglbl4[0]; //just the brother name
+        localStorage.setItem("LocalStorageTunnel", tunnelglbl3);
     }
     else if (tunnel.src.match("Tunnel")) {
         tunnelglbl3 = "None";
+        localStorage.setItem("LocalStorageTunnel", tunnelglbl3);
     }
     //If the image was an alive one
     else {
         tunnelglbl = tunnel.src.match(regex);
         tunnelglbl2 = tunnelglbl[0].match(regex3);
         tunnelglbl3 = tunnelglbl2[0]; //just the brother name}
+        localStorage.setItem("LocalStorageTunnel", tunnelglbl3);
     }
     return;
 }
 //Webpage calls this function here.
 function start() {
+    //only run the once, and only if the storage isnt empty, otherwise stick with default
+    if (pageload == 0) {
+        if (localStorage.Localstoragerefreshrate.length > 0) //only change if the user has set a refresh rate
+         {
+            //Reads from stroage refresh rate, update it to be refresh rate.
+            storedrefreshrate = parseInt(localStorage.Localstoragerefreshrate);
+            document.getElementById('refreshratehtml').value = String(storedrefreshrate);
+            refreshrate = storedrefreshrate;
+        }
+        //need to sort brother lists, and set red images in here.
+        if (localStorage.LocalStorageBrotherNonSelectList.length > 0) {
+            brotherListnonselect = JSON.parse(localStorage.getItem("LocalStorageBrotherNonSelectList"));
+            for (const [key2] of Object.entries(brotherListnonselect)) {
+                if (!key2.includes(tunnelglbl3)) //dont overwirte selected tunnel if player has selected it
+                 {
+                    document.getElementById(`${key2}HTMLimg`).src = `./TooltipHeads/${key2}Deselect.PNG`;
+                    document.getElementById(`${key2}`).src = `./TooltipHeads/${key2}Deselect.PNG`;
+                }
+            }
+        }
+        //Setup brotherListSelect with stored info
+        brotherListselect = JSON.parse(localStorage.getItem("LocalStorageBrotherSelectList"));
+        if (localStorage.LocalStorageTunnel.length > 0 && localStorage.getItem("LocalStorageTunnel") != "None") {
+            tunnelglbl3 = localStorage.getItem("LocalStorageTunnel");
+            document.getElementById(`${tunnelglbl3}HTMLimg`).src = `./TooltipHeads/${tunnelglbl3}HTMLimgTunnel.PNG`;
+        }
+        toKill = ObjectLength(brotherListselect);
+        pageload = 1;
+    }
     //Set effective refresh rate (todo, customise this rate)
     interval = setInterval(tick, refreshrate);
+    //go to tick method and loop away!
     tick();
 }
 function tick() {
@@ -4075,6 +4117,7 @@ function chest(img) {
     if (window.alt1) {
         if (chestloc.length != 0) {
             tunnelglbl3 = "None";
+            localStorage.setItem("LocalStorageTunnel", tunnelglbl3);
             brocount = 8;
         }
     }

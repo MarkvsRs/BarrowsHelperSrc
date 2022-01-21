@@ -3,7 +3,7 @@
 import * as a1lib from "@alt1/base";
 import { ImgRef } from "@alt1/base";
 //import { lookup } from "dns";
-//import { stringify } from "querystring";
+import { stringify } from "querystring";
 import   * as resemble from "resemblejs";
 import { ChainedSet } from "webpack-chain";
 
@@ -21,11 +21,12 @@ var interval
 var justleft = 0 
 var tunnelglbl
 var tunnelglbl2
-var tunnelglbl3
+var tunnelglbl3 = "None"
 var tunnelglbl4
 var regex = "([^\/]+$)"
 var regex2 = "^.*(?=(Deselect))"
 var regex3 = "^.*(?=(\.PNG))"
+var pageload = 0
 
 
 
@@ -143,6 +144,12 @@ export function changesettings(toggle) {
 		delete brotherListnonselect[toggle.id]; 
 
 		toKill = ObjectLength(brotherListselect)
+
+		//Set the localobjects for subsequent plugin loads
+		localStorage.setItem("LocalStorageBrotherSelectList", JSON.stringify(brotherListselect));
+		localStorage.setItem("LocalStorageBrotherNonSelectList", JSON.stringify(brotherListnonselect));
+		
+
 		
 	}
 	else {	
@@ -152,16 +159,25 @@ export function changesettings(toggle) {
 		brotherListnonselect[toggle.id] = [toggle.id];
 
 		toKill = ObjectLength(brotherListselect)
+		
+		//Set the localobjects for subsequent plugin loads
+		localStorage.setItem("LocalStorageBrotherSelectList", JSON.stringify(brotherListselect));
+		localStorage.setItem("LocalStorageBrotherNonSelectList", JSON.stringify(brotherListnonselect));
 	}	
 	return;	
 };
 
 export function changerefresh(refresh) {
-	storedrefreshrate = refresh.value
-	refreshrate = storedrefreshrate
 	
+    localStorage.setItem("Localstoragerefreshrate", refresh.value);
+	storedrefreshrate = parseInt(localStorage.Localstoragerefreshrate);
+	//storedrefreshrate = refresh.value
+	if (refreshrate != storedrefreshrate)
+	{refreshrate = storedrefreshrate
+	 
 	clearInterval(interval)
 	start()
+	}
 	return;
 };
 
@@ -174,10 +190,12 @@ export function TunnelSelect(tunnel)
 		tunnelglbl2  = tunnelglbl[0].match(regex3)
 		tunnelglbl4  = tunnelglbl2[0].match(regex2)
 		tunnelglbl3 = tunnelglbl4[0] //just the brother name
+		localStorage.setItem("LocalStorageTunnel",tunnelglbl3);
 	}
 	else if (tunnel.src.match("Tunnel"))
 	{
 		tunnelglbl3 = "None"
+		localStorage.setItem("LocalStorageTunnel",tunnelglbl3);
 	}
 	//If the image was an alive one
 	else
@@ -185,15 +203,64 @@ export function TunnelSelect(tunnel)
 		tunnelglbl = tunnel.src.match(regex)
 		tunnelglbl2  = tunnelglbl[0].match(regex3)
 		tunnelglbl3 = tunnelglbl2[0] //just the brother name}
+		
+		localStorage.setItem("LocalStorageTunnel",tunnelglbl3);
 	}
 	return;
 }
 //Webpage calls this function here.
 export function start() {
 	
+	//only run the once, and only if the storage isnt empty, otherwise stick with default
+	if (pageload == 0 )
+	{
+		if (localStorage.Localstoragerefreshrate.length > 0) //only change if the user has set a refresh rate
+		{
+			//Reads from stroage refresh rate, update it to be refresh rate.
+			storedrefreshrate = parseInt(localStorage.Localstoragerefreshrate);
+			(document.getElementById('refreshratehtml')as HTMLInputElement).value = String(storedrefreshrate);
+			refreshrate = storedrefreshrate
+		}
+			
+
+		//need to sort brother lists, and set red images in here.
+
+		if (localStorage.LocalStorageBrotherNonSelectList.length > 0)
+		{
+			
+			brotherListnonselect = JSON.parse(localStorage.getItem("LocalStorageBrotherNonSelectList"))
+	
+
+			for (const [key2] of Object.entries(brotherListnonselect)) 
+			{
+				if (!key2.includes(tunnelglbl3)) //dont overwirte selected tunnel if player has selected it
+				{
+					(document.getElementById(`${key2}HTMLimg`) as HTMLImageElement).src = `./TooltipHeads/${key2}Deselect.PNG` ;
+					(document.getElementById(`${key2}`) as HTMLImageElement).src = `./TooltipHeads/${key2}Deselect.PNG` ;
+				}
+			}
+		}
+		
+		//Setup brotherListSelect with stored info
+		brotherListselect = JSON.parse(localStorage.getItem("LocalStorageBrotherSelectList"));
+
+		if (localStorage.LocalStorageTunnel.length > 0 && localStorage.getItem("LocalStorageTunnel") != "None")
+		{
+			tunnelglbl3 = localStorage.getItem("LocalStorageTunnel");
+			(document.getElementById(`${tunnelglbl3}HTMLimg`) as HTMLImageElement).src = `./TooltipHeads/${tunnelglbl3}HTMLimgTunnel.PNG` ;
+		}
+
+		toKill = ObjectLength(brotherListselect)
+		pageload = 1
+	}
+
+
 	//Set effective refresh rate (todo, customise this rate)
     interval = setInterval(tick,refreshrate); 
-	    
+
+
+
+	//go to tick method and loop away!
 	tick(); 
 }
 
@@ -662,6 +729,7 @@ function chest(img) //finds reward chest, used to reset tunnel green image
 	if (window.alt1) {
 		if (chestloc.length != 0) {
 			tunnelglbl3 = "None"
+			localStorage.setItem("LocalStorageTunnel",tunnelglbl3);
 			brocount = 8
 		}
 	}
