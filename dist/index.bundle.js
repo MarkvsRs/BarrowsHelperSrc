@@ -5713,7 +5713,7 @@ function findBrothers(img) {
         droprate = 0;
     }
     if ((brocount - brocountMinusLinza) > 0) {
-        droprate = Math.round(Math.max((450 - (58 * (brocount - brocountMinusLinza))), 73) / (brocount - brocountMinusLinza) * 100) / 100;
+        droprate = Math.round(Math.max((450 - (58 * (brocount - brocountMinusLinza))), 73) / (Math.min((1 + (brocount - brocountMinusLinza)), 7)) * 100) / 100;
     }
 }
 function doorLock(img) {
