@@ -219,7 +219,17 @@
 							</div>
 							<div class="col">
 								<br/>
-								<input class="input-width" type="number" id="refreshratehtml" name="refreshratehtml" placeholder="100" min="100" max="1000" step="50" onchange="TEST.changerefresh(this);" >
+								<input class="input-width" type="number" id="refreshratehtml" name="refreshratehtml" placeholder="0" min="100" max="1000" step="50" onchange="TEST.changerefresh(this);" >
+							</div>
+
+						</div>
+						<div class="row">
+							<div class="col" title="Amend KC if you need to" style="margin-top:-7px;">
+								<p>Amend KC here if you need to (enter KC that you are supposed to be on)</p>
+							</div>
+							<div class="col">
+								<br/>
+								<input class="input-width" type="number" id="KCchange" name="KCchange" placeholder="0" min="0" max="999999999" step="0" onchange="TEST.changeKC(this);" >
 							</div>
 
 						</div>

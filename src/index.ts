@@ -7,6 +7,9 @@ import { stringify } from "querystring";
 import   * as resemble from "resemblejs";
 import { ChainedSet } from "webpack-chain";
 
+import * as Chatbox from "@alt1/chatbox";
+import { maxHeaderSize } from "http";
+
 //tell webpack to add index.html and appconfig.json to output
 
 require("!file-loader?name=[name].[ext]!./index.html");
@@ -27,7 +30,94 @@ var regex = "([^\/]+$)"
 var regex2 = "^.*(?=(Deselect))"
 var regex3 = "^.*(?=(\.PNG))"
 var pageload = 0
+var BarrowsKC = 0
+const appColor = a1lib.mixColor(0, 255, 0);
+var droprate = 0
+var Linzakill = 0
 
+
+//Chat reader stuff
+let reader = new Chatbox.default();
+reader.readargs = {
+  colors: [
+    a1lib.mixColor(255, 255, 255), //white text
+]
+};
+
+function showSelectedChat(chat) {
+	//Attempt to show a temporary rectangle around the chatbox.  skip if overlay is not enabled.
+	try {
+	  alt1.overLayRect(
+		appColor,
+		chat.mainbox.rect.x,
+		chat.mainbox.rect.y,
+		chat.mainbox.rect.width,
+		chat.mainbox.rect.height,
+		2000,
+		5
+	  );
+	} catch { }
+  }
+
+    
+declare global {
+    interface Navigator {
+        msSaveBlob?: (blob: any, defaultName?: string) => boolean
+    }
+}
+
+if (navigator.msSaveBlob) {
+    // use navigator.msSaveBlob
+}
+
+//Find all visible chatboxes on screen
+let findChat = setInterval(function () {
+  if (reader.pos === null)
+    reader.find();
+  else {
+    clearInterval(findChat);
+    reader.pos.boxes.map((box, i) => {
+      $(".chat").append(`<option value=${i}>Chat ${i}</option>`);
+    });
+
+    if (localStorage.ccChat) {
+      reader.pos.mainbox = reader.pos.boxes[localStorage.ccChat];
+    } else {
+      //If multiple boxes are found, this will select the first, which should be the top-most chat box on the screen.
+      reader.pos.mainbox = reader.pos.boxes[0];
+    }
+    showSelectedChat(reader.pos);
+    setInterval(function () {
+      readChatbox();
+    }, 600);
+  }
+}, 1000);
+  
+function readChatbox() {
+	var opts = reader.read() || [];
+	var chat = "";
+  
+	for (const a in opts) {
+	  chat += opts[a].text + " ";
+	}  
+	  var comps = chat.match(
+		"The chest is now empty"
+		);
+		//add 1 to kc and localstorage for kc. 
+		if (comps != null)
+		{
+		  if (comps[1] = "The chest is now empty") {
+			BarrowsKC ++
+			
+ 			localStorage.setItem("barrowsKC",JSON.stringify(BarrowsKC));
+
+			 
+
+		  }
+		}
+	}
+   
+  
 
 
 //loads all images as raw pixel data async, images have to be saved as *.data.PNG
@@ -179,6 +269,21 @@ export function changerefresh(refresh) {
 	start()
 	}
 	return;
+
+};
+
+export function changeKC(KC) {
+	 console.log("changeKC")
+	 console.log(KC)
+   
+	localStorage.setItem("barrowsKC",KC.value);
+	
+	console.log(BarrowsKC)
+	BarrowsKC = parseInt(localStorage.barrowsKC);
+	
+	start()
+	
+	return;
 };
 
 export function TunnelSelect(tunnel)
@@ -214,7 +319,6 @@ export function start() {
 	//only run the once, and only if the storage isnt empty, otherwise stick with default
 	if (pageload == 0 )
 	{
-		console.log(localStorage.getItem("Localstoragerefreshrate"))
 		if (localStorage.getItem("Localstoragerefreshrate") !== null) //only change if the user has set a refresh rate
 		{
 			//Reads from stroage refresh rate, update it to be refresh rate.
@@ -222,7 +326,17 @@ export function start() {
 			(document.getElementById('refreshratehtml')as HTMLInputElement).value = String(storedrefreshrate);
 			refreshrate = storedrefreshrate
 		}
-			
+		
+
+
+		//KC counter
+		if (localStorage.getItem("barrowsKC") !== null )
+		{
+			BarrowsKC = parseInt(localStorage.barrowsKC);
+			(document.getElementById('KCchange')as HTMLInputElement).value = String(BarrowsKC);
+		}
+		//set conter to be current value in settings.
+		
 
 		//need to sort brother lists, and set red images in here.
 
@@ -258,7 +372,7 @@ export function start() {
 	}
 
 
-	//Set effective refresh rate (todo, customise this rate)
+	//Set effective refresh rate
     interval = setInterval(tick,refreshrate); 
 
 
@@ -279,6 +393,11 @@ function tick() {
 
 
 function atbarrows(img: ImgRef){
+
+	
+	//Display current KC
+	var text = document.getElementById(`Status`).textContent = "Barrows KC: " +JSON.stringify(BarrowsKC)  +  " --- Linza Piece Rate: 1/" + Linzakill + " \tCurrent droprate for this chest: 1/" + droprate;
+
 	//Check Brothers slain list header
 	for (const [key] of Object.entries(slainimg)) {
 		var loc = img.findSubimage(slainimg[key]);
@@ -344,9 +463,11 @@ function atbarrows(img: ImgRef){
 }
 
 function findBrothers(img: ImgRef) {
+	
 	//set this here so the count doesnt keep going up each loop round
 	brocount = 0
 	
+	var brocountMinusLinza = brocount
 	//var text = document.getElementById('debug').textContent = ` test: ${brocount}`;
 	for (const [key] of Object.entries(brotherimgs)) {
 		
@@ -380,10 +501,18 @@ function findBrothers(img: ImgRef) {
 		if (broloc.length != 0) {
 			//increase kill counter
 			brocount += 1;
+			//determine if linzais killed (for droprate stuff)
+			if ( key.includes('Linza'))
+					{
+						brocountMinusLinza = 1
+						Linzakill = 192
+					}
+					else {Linzakill = 0}
 			if (!key.includes(tunnelglbl3)) //dont overwirte selected tunnel if player has selected it
 				{
 					//replace image with greyed out version if brother name found in list
 					(document.getElementById(`${key}HTMLimg`) as HTMLImageElement).src = `./TooltipHeads/${key}Dead.PNG`
+					
 				}
 			//remove relevant brother from brother list - used to display which brother is left when showing tunnel location
 			delete brotherList[key];			
@@ -392,14 +521,14 @@ function findBrothers(img: ImgRef) {
 	/*
 	// Some debug shit I'm leaving in as I cba to rrewrite it when i inevitably need it again
 	var text = document.getElementById('debug').textContent = ` test: tokill ${toKill}`
-	*//*
+	
 	var text = document.getElementById('spare').textContent = ` broselectlist ${Object.keys(brotherListselect)}`
 	
 	var text = document.getElementById('canvastest').textContent = ` non bro select list ${Object.keys(brotherListnonselect)}`
 	
 	var text = document.getElementById('canvastest2').textContent = ` brolist ${Object.keys(brotherList)}`
 	
-	var text = document.getElementById('spare').textContent = `${Object.keys(brotherList).filter((key) => !key.includes('Torag'))}`*/
+	var text = document.getElementById('spare').textContent = `${Object.keys(brotherList).filter((key) => !key.includes('Torag'))}`
 	
 	
 	//display brothers killed/tomb location/go loot the chest
@@ -439,6 +568,18 @@ function findBrothers(img: ImgRef) {
 	}	
 	
 	return;
+	*/
+	
+	if ((brocount-brocountMinusLinza) ==0)
+	{
+		droprate = 0
+	}
+
+	if ((brocount-brocountMinusLinza) >0)
+	{
+		droprate = Math.round(Math.max((450-(58*(brocount-brocountMinusLinza))),73) / (brocount-brocountMinusLinza) * 100) / 100
+	}
+	
 }	
 
 
@@ -734,6 +875,7 @@ function chest(img) //finds reward chest, used to reset tunnel green image
 			tunnelglbl3 = "None"
 			localStorage.setItem("LocalStorageTunnel",tunnelglbl3);
 			brocount = 8
+			Linzakill = 0
 		}
 	}
 
