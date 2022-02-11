@@ -10,6 +10,8 @@ import { ChainedSet } from "webpack-chain";
 import * as Chatbox from "@alt1/chatbox";
 import { maxHeaderSize } from "http";
 
+import * as $ from "./jquery";
+
 //tell webpack to add index.html and appconfig.json to output
 
 require("!file-loader?name=[name].[ext]!./index.html");
