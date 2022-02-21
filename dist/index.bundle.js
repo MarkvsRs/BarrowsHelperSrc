@@ -5569,7 +5569,7 @@ function atbarrows(img) {
         var loc = img.findSubimage(slainimg[key]);
         if (loc.length == 0) {
             //change status in alt1 browser to "Not at barrows"
-            document.getElementById('Status').textContent = "Not at barrows";
+            document.getElementById('Status').textContent = "Due to update to barrows brothers killed interface on 21st feb 2022 the helper isnt currently working, I'm working on a fix but it may take a coulpe days due to IRL commitments."; //"Not at barrows";
             //reset brother list.
             var newObject = JSON.stringify(fullbrotherList);
             brotherList = JSON.parse(newObject);
