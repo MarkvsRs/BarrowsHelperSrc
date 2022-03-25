@@ -3014,7 +3014,7 @@ module.exports=(__webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/bas
   \*****************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports=(__webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js").ImageDetect.imageDataFromBase64)("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")
+module.exports=(__webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js").ImageDetect.imageDataFromBase64)("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")
 
 /***/ }),
 
@@ -3934,22 +3934,21 @@ exports.loadImage = function (src, options) {
  */
 
 const weights = 'bold|bolder|lighter|[1-9]00'
-  , styles = 'italic|oblique'
-  , variants = 'small-caps'
-  , stretches = 'ultra-condensed|extra-condensed|condensed|semi-condensed|semi-expanded|expanded|extra-expanded|ultra-expanded'
-  , units = 'px|pt|pc|in|cm|mm|%|em|ex|ch|rem|q'
-  , string = '\'([^\']+)\'|"([^"]+)"|[\\w\\s-]+'
+const styles = 'italic|oblique'
+const variants = 'small-caps'
+const stretches = 'ultra-condensed|extra-condensed|condensed|semi-condensed|semi-expanded|expanded|extra-expanded|ultra-expanded'
+const units = 'px|pt|pc|in|cm|mm|%|em|ex|ch|rem|q'
+const string = '\'([^\']+)\'|"([^"]+)"|[\\w\\s-]+'
 
 // [ [ <‘font-style’> || <font-variant-css21> || <‘font-weight’> || <‘font-stretch’> ]?
 //    <‘font-size’> [ / <‘line-height’> ]? <‘font-family’> ]
 // https://drafts.csswg.org/css-fonts-3/#font-prop
-const weightRe = new RegExp('(' + weights + ') +', 'i')
-const styleRe = new RegExp('(' + styles + ') +', 'i')
-const variantRe = new RegExp('(' + variants + ') +', 'i')
-const stretchRe = new RegExp('(' + stretches + ') +', 'i')
+const weightRe = new RegExp(`(${weights}) +`, 'i')
+const styleRe = new RegExp(`(${styles}) +`, 'i')
+const variantRe = new RegExp(`(${variants}) +`, 'i')
+const stretchRe = new RegExp(`(${stretches}) +`, 'i')
 const sizeFamilyRe = new RegExp(
-  '([\\d\\.]+)(' + units + ') *'
-  + '((?:' + string + ')( *, *(?:' + string + '))*)')
+  `([\\d\\.]+)(${units}) *((?:${string})( *, *(?:${string}))*)`)
 
 /**
  * Cache font parsing.
@@ -3968,7 +3967,7 @@ const defaultHeight = 16 // pt, common browser default
  * @api private
  */
 
-module.exports = function (str) {
+module.exports = str => {
   // Cached
   if (cache[str]) return cache[str]
 
@@ -3990,7 +3989,7 @@ module.exports = function (str) {
   // Optional, unordered properties.
   let weight, style, variant, stretch
   // Stop search at `sizeFamily.index`
-  let substr = str.substring(0, sizeFamily.index)
+  const substr = str.substring(0, sizeFamily.index)
   if ((weight = weightRe.exec(substr))) font.weight = weight[1]
   if ((style = styleRe.exec(substr))) font.style = style[1]
   if ((variant = variantRe.exec(substr))) font.variant = variant[1]
@@ -4386,10 +4385,11 @@ var isNode = function () {
                 hiddenImage.setAttribute("crossorigin", "anonymous");
             }
 
-            hiddenImage.onerror = function (err) {
+            hiddenImage.onerror = function (event) {
                 hiddenImage.onload = null;
                 hiddenImage.onerror = null; // fixes pollution between calls
-                images.push({ error: err ? err + "" : "Image load error." });
+                const error = event ? event + "" : "Unknown error";
+                images.push({ error: `Failed to load image '${fileDataForImage}'. ${error}` });
                 callback();
             };
 
