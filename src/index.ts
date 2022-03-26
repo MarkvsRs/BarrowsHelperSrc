@@ -98,16 +98,10 @@ function readChatbox() {
 	var opts = reader.read() || [];
 	var chat = "";
   
-	console.log("opts")
-	console.log(opts)
 	for (const a in opts) {
 	  chat += opts[a].text + " ";
 	}  
 	
-	console.log("chat")
-	console.log(chat)
-	console.log("comps")
-	console.log(comps)
 	  var comps = chat.match(
 		"The chest is now empty"
 		);
@@ -115,15 +109,10 @@ function readChatbox() {
 		if (comps != null)
 		{
 			
-	console.log("notNull")
-	console.log(comps[1])
 		  if (comps[1] = "The chest is now empty") {
 			BarrowsKC ++
-			
-	console.log("++")
- 			localStorage.setItem("barrowsKC",JSON.stringify(BarrowsKC));
-
-			 
+		
+ 			localStorage.setItem("barrowsKC",JSON.stringify(BarrowsKC));		 
 
 		  }
 		}
