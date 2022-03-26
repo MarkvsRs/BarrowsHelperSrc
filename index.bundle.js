@@ -360,18 +360,18 @@ if (typeof HTMLImageElement != "undefined") {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "imageDataFromUrl": () => (/* binding */ imageDataFromUrl),
+/* harmony export */   "ImageDataSet": () => (/* binding */ ImageDataSet),
+/* harmony export */   "asyncMap": () => (/* binding */ asyncMap),
+/* harmony export */   "clearPngColorspace": () => (/* binding */ clearPngColorspace),
+/* harmony export */   "coldif": () => (/* binding */ coldif),
+/* harmony export */   "findSubbuffer": () => (/* binding */ findSubbuffer),
+/* harmony export */   "findSubimage": () => (/* binding */ findSubimage),
 /* harmony export */   "imageDataFromBase64": () => (/* binding */ imageDataFromBase64),
 /* harmony export */   "imageDataFromFileBuffer": () => (/* binding */ imageDataFromFileBuffer),
+/* harmony export */   "imageDataFromUrl": () => (/* binding */ imageDataFromUrl),
 /* harmony export */   "isPngBuffer": () => (/* binding */ isPngBuffer),
-/* harmony export */   "clearPngColorspace": () => (/* binding */ clearPngColorspace),
-/* harmony export */   "findSubimage": () => (/* binding */ findSubimage),
-/* harmony export */   "findSubbuffer": () => (/* binding */ findSubbuffer),
 /* harmony export */   "simpleCompare": () => (/* binding */ simpleCompare),
-/* harmony export */   "coldif": () => (/* binding */ coldif),
-/* harmony export */   "asyncMap": () => (/* binding */ asyncMap),
-/* harmony export */   "webpackImages": () => (/* binding */ webpackImages),
-/* harmony export */   "ImageDataSet": () => (/* binding */ ImageDataSet)
+/* harmony export */   "webpackImages": () => (/* binding */ webpackImages)
 /* harmony export */ });
 /* harmony import */ var _imgref_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./imgref.js */ "../node_modules/@alt1/base/dist/imgref.js");
 /* harmony import */ var _wrapper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./wrapper.js */ "../node_modules/@alt1/base/dist/wrapper.js");
@@ -734,8 +734,8 @@ class ImageDataSet {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ImgRef": () => (/* binding */ ImgRef),
-/* harmony export */   "ImgRefCtx": () => (/* binding */ ImgRefCtx),
 /* harmony export */   "ImgRefBind": () => (/* binding */ ImgRefBind),
+/* harmony export */   "ImgRefCtx": () => (/* binding */ ImgRefCtx),
 /* harmony export */   "ImgRefData": () => (/* binding */ ImgRefData)
 /* harmony export */ });
 /* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.js */ "../node_modules/@alt1/base/dist/index.js");
@@ -842,18 +842,18 @@ class ImgRefData extends ImgRef {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ImageDetect": () => (/* reexport module object */ _imagedetect_js__WEBPACK_IMPORTED_MODULE_1__),
-/* harmony export */   "PasteInput": () => (/* reexport module object */ _pasteinput_js__WEBPACK_IMPORTED_MODULE_2__),
-/* harmony export */   "Rect": () => (/* reexport safe */ _rect_js__WEBPACK_IMPORTED_MODULE_3__["default"]),
+/* harmony export */   "Alt1Error": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.Alt1Error),
 /* harmony export */   "ImageData": () => (/* reexport safe */ _imagedata_extensions_js__WEBPACK_IMPORTED_MODULE_4__.ImageData),
-/* harmony export */   "NodePolyfill": () => (/* reexport module object */ _nodepolyfill_js__WEBPACK_IMPORTED_MODULE_5__),
+/* harmony export */   "ImageDetect": () => (/* reexport module object */ _imagedetect_js__WEBPACK_IMPORTED_MODULE_1__),
+/* harmony export */   "ImageStreamReader": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.ImageStreamReader),
 /* harmony export */   "ImgRef": () => (/* reexport safe */ _imgref_js__WEBPACK_IMPORTED_MODULE_6__.ImgRef),
 /* harmony export */   "ImgRefBind": () => (/* reexport safe */ _imgref_js__WEBPACK_IMPORTED_MODULE_6__.ImgRefBind),
 /* harmony export */   "ImgRefCtx": () => (/* reexport safe */ _imgref_js__WEBPACK_IMPORTED_MODULE_6__.ImgRefCtx),
 /* harmony export */   "ImgRefData": () => (/* reexport safe */ _imgref_js__WEBPACK_IMPORTED_MODULE_6__.ImgRefData),
-/* harmony export */   "Alt1Error": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.Alt1Error),
-/* harmony export */   "ImageStreamReader": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.ImageStreamReader),
 /* harmony export */   "NoAlt1Error": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.NoAlt1Error),
+/* harmony export */   "NodePolyfill": () => (/* reexport module object */ _nodepolyfill_js__WEBPACK_IMPORTED_MODULE_5__),
+/* harmony export */   "PasteInput": () => (/* reexport module object */ _pasteinput_js__WEBPACK_IMPORTED_MODULE_2__),
+/* harmony export */   "Rect": () => (/* reexport safe */ _rect_js__WEBPACK_IMPORTED_MODULE_3__["default"]),
 /* harmony export */   "addResizeElement": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.addResizeElement),
 /* harmony export */   "capture": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.capture),
 /* harmony export */   "captureAsync": () => (/* reexport safe */ _wrapper_js__WEBPACK_IMPORTED_MODULE_7__.captureAsync),
@@ -911,15 +911,15 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "polyfillRequire": () => (/* binding */ polyfillRequire),
-/* harmony export */   "requireSharp": () => (/* binding */ requireSharp),
-/* harmony export */   "requireNodeCanvas": () => (/* binding */ requireNodeCanvas),
-/* harmony export */   "requireElectronCommon": () => (/* binding */ requireElectronCommon),
-/* harmony export */   "imageDataToDrawable": () => (/* binding */ imageDataToDrawable),
 /* harmony export */   "createCanvas": () => (/* binding */ createCanvas),
-/* harmony export */   "imageDataToFileBytes": () => (/* binding */ imageDataToFileBytes),
 /* harmony export */   "imageDataFromBase64": () => (/* binding */ imageDataFromBase64),
-/* harmony export */   "imageDataFromBuffer": () => (/* binding */ imageDataFromBuffer)
+/* harmony export */   "imageDataFromBuffer": () => (/* binding */ imageDataFromBuffer),
+/* harmony export */   "imageDataToDrawable": () => (/* binding */ imageDataToDrawable),
+/* harmony export */   "imageDataToFileBytes": () => (/* binding */ imageDataToFileBytes),
+/* harmony export */   "polyfillRequire": () => (/* binding */ polyfillRequire),
+/* harmony export */   "requireElectronCommon": () => (/* binding */ requireElectronCommon),
+/* harmony export */   "requireNodeCanvas": () => (/* binding */ requireNodeCanvas),
+/* harmony export */   "requireSharp": () => (/* binding */ requireSharp)
 /* harmony export */ });
 /* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.js */ "../node_modules/@alt1/base/dist/index.js");
 /* harmony import */ var _imagedetect_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./imagedetect.js */ "../node_modules/@alt1/base/dist/imagedetect.js");
@@ -1086,13 +1086,13 @@ function imageDataFromBuffer(buffer) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "fileDialog": () => (/* binding */ fileDialog),
 /* harmony export */   "lastref": () => (/* binding */ lastref),
 /* harmony export */   "listen": () => (/* binding */ listen),
-/* harmony export */   "unlisten": () => (/* binding */ unlisten),
-/* harmony export */   "triggerPaste": () => (/* binding */ triggerPaste),
-/* harmony export */   "startDragNDrop": () => (/* binding */ startDragNDrop),
 /* harmony export */   "start": () => (/* binding */ start),
-/* harmony export */   "fileDialog": () => (/* binding */ fileDialog)
+/* harmony export */   "startDragNDrop": () => (/* binding */ startDragNDrop),
+/* harmony export */   "triggerPaste": () => (/* binding */ triggerPaste),
+/* harmony export */   "unlisten": () => (/* binding */ unlisten)
 /* harmony export */ });
 /* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.js */ "../node_modules/@alt1/base/dist/index.js");
 /* harmony import */ var _imagedetect_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./imagedetect.js */ "../node_modules/@alt1/base/dist/imagedetect.js");
@@ -1411,35 +1411,35 @@ class Rect {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "NoAlt1Error": () => (/* binding */ NoAlt1Error),
 /* harmony export */   "Alt1Error": () => (/* binding */ Alt1Error),
-/* harmony export */   "newestversion": () => (/* binding */ newestversion),
-/* harmony export */   "hasAlt1": () => (/* binding */ hasAlt1),
-/* harmony export */   "skinName": () => (/* binding */ skinName),
-/* harmony export */   "openbrowser": () => (/* binding */ openbrowser),
-/* harmony export */   "requireAlt1": () => (/* binding */ requireAlt1),
-/* harmony export */   "getdisplaybounds": () => (/* binding */ getdisplaybounds),
+/* harmony export */   "ImageStreamReader": () => (/* binding */ ImageStreamReader),
+/* harmony export */   "NoAlt1Error": () => (/* binding */ NoAlt1Error),
+/* harmony export */   "addResizeElement": () => (/* binding */ addResizeElement),
 /* harmony export */   "capture": () => (/* binding */ capture),
+/* harmony export */   "captureAsync": () => (/* binding */ captureAsync),
 /* harmony export */   "captureHold": () => (/* binding */ captureHold),
-/* harmony export */   "captureHoldScreen": () => (/* binding */ captureHoldScreen),
 /* harmony export */   "captureHoldFullRs": () => (/* binding */ captureHoldFullRs),
-/* harmony export */   "transferImageData": () => (/* binding */ transferImageData),
+/* harmony export */   "captureHoldScreen": () => (/* binding */ captureHoldScreen),
+/* harmony export */   "captureMultiAsync": () => (/* binding */ captureMultiAsync),
+/* harmony export */   "captureStream": () => (/* binding */ captureStream),
 /* harmony export */   "decodeImageString": () => (/* binding */ decodeImageString),
 /* harmony export */   "encodeImageString": () => (/* binding */ encodeImageString),
-/* harmony export */   "mixColor": () => (/* binding */ mixColor),
-/* harmony export */   "unmixColor": () => (/* binding */ unmixColor),
-/* harmony export */   "identifyApp": () => (/* binding */ identifyApp),
-/* harmony export */   "resetEnvironment": () => (/* binding */ resetEnvironment),
-/* harmony export */   "hasAlt1Version": () => (/* binding */ hasAlt1Version),
 /* harmony export */   "getMousePosition": () => (/* binding */ getMousePosition),
-/* harmony export */   "addResizeElement": () => (/* binding */ addResizeElement),
+/* harmony export */   "getdisplaybounds": () => (/* binding */ getdisplaybounds),
+/* harmony export */   "hasAlt1": () => (/* binding */ hasAlt1),
+/* harmony export */   "hasAlt1Version": () => (/* binding */ hasAlt1Version),
+/* harmony export */   "identifyApp": () => (/* binding */ identifyApp),
+/* harmony export */   "mixColor": () => (/* binding */ mixColor),
+/* harmony export */   "newestversion": () => (/* binding */ newestversion),
 /* harmony export */   "on": () => (/* binding */ on),
-/* harmony export */   "removeListener": () => (/* binding */ removeListener),
 /* harmony export */   "once": () => (/* binding */ once),
-/* harmony export */   "ImageStreamReader": () => (/* binding */ ImageStreamReader),
-/* harmony export */   "captureAsync": () => (/* binding */ captureAsync),
-/* harmony export */   "captureMultiAsync": () => (/* binding */ captureMultiAsync),
-/* harmony export */   "captureStream": () => (/* binding */ captureStream)
+/* harmony export */   "openbrowser": () => (/* binding */ openbrowser),
+/* harmony export */   "removeListener": () => (/* binding */ removeListener),
+/* harmony export */   "requireAlt1": () => (/* binding */ requireAlt1),
+/* harmony export */   "resetEnvironment": () => (/* binding */ resetEnvironment),
+/* harmony export */   "skinName": () => (/* binding */ skinName),
+/* harmony export */   "transferImageData": () => (/* binding */ transferImageData),
+/* harmony export */   "unmixColor": () => (/* binding */ unmixColor)
 /* harmony export */ });
 /* harmony import */ var _rect_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./rect.js */ "../node_modules/@alt1/base/dist/rect.js");
 /* harmony import */ var _imgref_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./imgref.js */ "../node_modules/@alt1/base/dist/imgref.js");
@@ -2109,23 +2109,33 @@ module.exports = {"chars":[{"width":13,"bonus":455,"chr":"a","pixels":[1,12,233,
 
 /***/ }),
 
-/***/ "../node_modules/@alt1/chatbox/dist/imgs/badgebroadcast.js":
-/*!*****************************************************************!*\
-  !*** ../node_modules/@alt1/chatbox/dist/imgs/badgebroadcast.js ***!
-  \*****************************************************************/
+/***/ "../node_modules/@alt1/chatbox/dist/imgs/badge_broadcast_bronze.js":
+/*!*************************************************************************!*\
+  !*** ../node_modules/@alt1/chatbox/dist/imgs/badge_broadcast_bronze.js ***!
+  \*************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports=(__webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js").ImageDetect.imageDataFromBase64)("iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAAW5vUEUAYtdMlAAAAARub1BFAAAAAEEgjiIAAAA2UExURQAAAAsICCEdHMZ8dappYgAAAVg0VYpLRWAsKIZ/fn9ANUolG9CHhTAUEjAgF1MyL/WkmQAAAO2GLvsAAAASdFJOU///////////////////////AOK/vxIAAAAJbm9QRQAAAAAAAAAAAKGKctUAAABJSURBVBhXPcpBEoAwCATBrIIQCDH8/7NiqnROfZiWf5vAx+OkY5MvEhFFNhBx7yyGovMYHMWcd6wVHvXCTF3ft0hz2mZC3R2ZD/YEBDE74WVXAAAAAElFTkSuQmCC")
+
+/***/ }),
+
+/***/ "../node_modules/@alt1/chatbox/dist/imgs/badge_broadcast_gold.js":
+/*!***********************************************************************!*\
+  !*** ../node_modules/@alt1/chatbox/dist/imgs/badge_broadcast_gold.js ***!
+  \***********************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports=(__webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js").ImageDetect.imageDataFromBase64)("iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAAW5vUEUAYtdMlAAAAARub1BFAAAAAEEgjiIAAAAzUExURQAAAAsICKyWbaCGWgAAAWtiTzAgF11CIIdmNjIrICEdHNukUc+cJXpWKUolG39ANQAAAPj2qJUAAAARdFJOU/////////////////////8AJa2ZYgAAAAlub1BFAAAAAAAAAAAAoYpy1QAAAE5JREFUGFc9jEsWgDAIA/mkQFup3P+0oguzmuS9DNWfRhYR5Rehw8wDRRg2RedyEGTo3tEzcSD2lXCmco/MPKdvK63j65Xh5D3xebs0VD3I+wPSC+2UNgAAAABJRU5ErkJggg==")
 
 /***/ }),
 
-/***/ "../node_modules/@alt1/chatbox/dist/imgs/badgedrop.js":
-/*!************************************************************!*\
-  !*** ../node_modules/@alt1/chatbox/dist/imgs/badgedrop.js ***!
-  \************************************************************/
+/***/ "../node_modules/@alt1/chatbox/dist/imgs/badge_broadcast_silver.js":
+/*!*************************************************************************!*\
+  !*** ../node_modules/@alt1/chatbox/dist/imgs/badge_broadcast_silver.js ***!
+  \*************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports=(__webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js").ImageDetect.imageDataFromBase64)("iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAAW5vUEUAYtdMlAAAAARub1BFAAAAAEEgjiIAAAA2UExURQAAAAsICCEdHMZ8dappYgAAAVg0VYpLRWAsKIZ/fn9ANUolG9CHhTAUEjAgF1MyL/WkmQAAAO2GLvsAAAASdFJOU///////////////////////AOK/vxIAAAAJbm9QRQAAAAAAAAAAAKGKctUAAABJSURBVBhXPcpBEoAwCATBrIIQCDH8/7NiqnROfZiWf5vAx+OkY5MvEhFFNhBx7yyGovMYHMWcd6wVHvXCTF3ft0hz2mZC3R2ZD/YEBDE74WVXAAAAAElFTkSuQmCC")
+module.exports=(__webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js").ImageDetect.imageDataFromBase64)("iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAAW5vUEUAYtdMlAAAAARub1BFAAAAAEEgjiIAAAAwUExURQAAAAsICCEdHJaWlgAAAUZHR2ZmZlpVVzs8OoZ/fq2trdPT08bGxzAwL+Dg4AAAADwgKvoAAAAQdFJOU////////////////////wDgI10ZAAAACW5vUEUAAAAAAAAAAAChinLVAAAASklEQVQYVz3MSQ6AMAwDwOxJS03+/1tKJfBpZFmm/nPI/FFU5dA8IrKsycZkVRtpxBHzWupu1Ki6F0T2ljO9dnk4gHB+z6QAcPcD17YDp+hpqhwAAAAASUVORK5CYII=")
 
 /***/ }),
 
@@ -2298,8 +2308,8 @@ module.exports=(__webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/bas
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "defaultcolors": () => (/* binding */ defaultcolors),
-/* harmony export */   "default": () => (/* binding */ ChatBoxReader)
+/* harmony export */   "default": () => (/* binding */ ChatBoxReader),
+/* harmony export */   "defaultcolors": () => (/* binding */ defaultcolors)
 /* harmony export */ });
 /* harmony import */ var _alt1_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js");
 /* harmony import */ var _alt1_ocr__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @alt1/ocr */ "../node_modules/@alt1/ocr/dist/index.js");
@@ -2309,13 +2319,13 @@ __webpack_require__.r(__webpack_exports__);
 
 let chatfont = __webpack_require__(/*! @alt1/ocr/fonts/chat_8px.js */ "../node_modules/@alt1/ocr/fonts/chat_8px.js");
 let fonts = [
-    { name: "10pt", lineheight: 14, badgey: -9, dy: -1, def: __webpack_require__(/*! ./fonts/10pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/10pt.js") },
-    { name: "12pt", lineheight: 16, badgey: -9, dy: -5, def: __webpack_require__(/*! ./fonts/12pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/12pt.js") },
-    { name: "14pt", lineheight: 18, badgey: -10, dy: -7, def: __webpack_require__(/*! ./fonts/14pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/14pt.js") },
-    { name: "16pt", lineheight: 21, badgey: -10, dy: -11, def: __webpack_require__(/*! ./fonts/16pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/16pt.js") },
-    { name: "18pt", lineheight: 23, badgey: -12, dy: -13, def: __webpack_require__(/*! ./fonts/18pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/18pt.js") },
-    { name: "20pt", lineheight: 25, badgey: -13, dy: -17, def: __webpack_require__(/*! ./fonts/20pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/20pt.js") },
-    { name: "22pt", lineheight: 27, badgey: -14, dy: -19, def: __webpack_require__(/*! ./fonts/22pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/22pt.js") },
+    { name: "10pt", lineheight: 14, badgey: -9, dy: 2, def: __webpack_require__(/*! ./fonts/10pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/10pt.js") },
+    { name: "12pt", lineheight: 16, badgey: -9, dy: -1, def: __webpack_require__(/*! ./fonts/12pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/12pt.js") },
+    { name: "14pt", lineheight: 18, badgey: -10, dy: -3, def: __webpack_require__(/*! ./fonts/14pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/14pt.js") },
+    { name: "16pt", lineheight: 21, badgey: -10, dy: -6, def: __webpack_require__(/*! ./fonts/16pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/16pt.js") },
+    { name: "18pt", lineheight: 23, badgey: -11, dy: -8, def: __webpack_require__(/*! ./fonts/18pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/18pt.js") },
+    { name: "20pt", lineheight: 25, badgey: -11, dy: -11, def: __webpack_require__(/*! ./fonts/20pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/20pt.js") },
+    { name: "22pt", lineheight: 27, badgey: -12, dy: -13, def: __webpack_require__(/*! ./fonts/22pt.js */ "../node_modules/@alt1/chatbox/dist/fonts/22pt.js") },
 ];
 const imgs = _alt1_base__WEBPACK_IMPORTED_MODULE_0__.ImageDetect.webpackImages({
     plusbutton: __webpack_require__(/*! ./imgs/plusbutton.js */ "../node_modules/@alt1/chatbox/dist/imgs/plusbutton.js"),
@@ -2334,8 +2344,9 @@ const chatbadges = _alt1_base__WEBPACK_IMPORTED_MODULE_0__.ImageDetect.webpackIm
     vip: __webpack_require__(/*! ./imgs/badgevip.js */ "../node_modules/@alt1/chatbox/dist/imgs/badgevip.js"),
     pmod: __webpack_require__(/*! ./imgs/badgepmod.js */ "../node_modules/@alt1/chatbox/dist/imgs/badgepmod.js"),
     pmodvip: __webpack_require__(/*! ./imgs/badgepmodvip.js */ "../node_modules/@alt1/chatbox/dist/imgs/badgepmodvip.js"),
-    broadcast: __webpack_require__(/*! ./imgs/badgebroadcast.js */ "../node_modules/@alt1/chatbox/dist/imgs/badgebroadcast.js"),
-    drop: __webpack_require__(/*! ./imgs/badgedrop.js */ "../node_modules/@alt1/chatbox/dist/imgs/badgedrop.js"),
+    broadcast_gold: __webpack_require__(/*! ./imgs/badge_broadcast_gold.js */ "../node_modules/@alt1/chatbox/dist/imgs/badge_broadcast_gold.js"),
+    broadcast_silver: __webpack_require__(/*! ./imgs/badge_broadcast_silver.js */ "../node_modules/@alt1/chatbox/dist/imgs/badge_broadcast_silver.js"),
+    broadcast_bronze: __webpack_require__(/*! ./imgs/badge_broadcast_bronze.js */ "../node_modules/@alt1/chatbox/dist/imgs/badge_broadcast_bronze.js"),
     ironman: __webpack_require__(/*! ./imgs/badgeironman.js */ "../node_modules/@alt1/chatbox/dist/imgs/badgeironman.js"),
     hcim: __webpack_require__(/*! ./imgs/badgehcim.js */ "../node_modules/@alt1/chatbox/dist/imgs/badgehcim.js")
 });
@@ -2343,8 +2354,9 @@ const badgemap = {
     vip: "\u2730",
     pmod: "\u2655",
     pmodvip: "\u2655",
-    broadcast: "\u2746",
-    drop: "\u2746",
+    broadcast_gold: "\u2746",
+    broadcast_silver: "\u2746",
+    broadcast_bronze: "\u2746",
     ironman: "\u26AF",
     hcim: "\u{1F480}", //SKULL
 };
@@ -2994,7 +3006,7 @@ module.exports=(__webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/bas
   \*****************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports=(__webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js").ImageDetect.imageDataFromBase64)("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")
+module.exports=(__webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js").ImageDetect.imageDataFromBase64)("iVBORw0KGgoAAAANSUhEUgAAAG8AAAAHCAYAAAAGYhNXAAAAAW5vUEUAYtdMlAAAAARub1BFAAAAAEEgjiIAAAAJbm9QRQAAAAAAAAAAAKGKctUAAAfQSURBVEhLXVYLcFRXGf7u3fvYTXazuyGPJSAGWiAQRB4pg20pElIsj0JLRoYZa0RhnGkFrdMZHRkHdaxSOzp2OiNqq4zI1NEi1Lc4kNBGikJIeI1toVgl9kGZ8kqy2d27997j95+bpdF/cidnz/3Pf77zf9//nwvVZ6tDP7CUbRrqyC5bXe+x1aJ0WrXXTVCrm+rVqvo6tX5Kk1rXXKuGjjjq6I9cNS9dc+ud/JenEgeA2tpp6d87t7hqRa5OdTQ16BgSc7zf5yp+m121NFev30vMjS0T1flfxNWR71epyYm4SsRi6q45MXWN2G7w2Tgno9ZMjuJd+q2jY9TXGOqjtVmNZXgMp5xDfgt28WlIm6rBddSX703r32tmp1TGttWCZlt9dZOlWtIptWRCrVpJDMvref6JPFtDvXpoVk69/XtXnXwmoRY0JVXKslQVMbVOiamBvbaawJh3c13lbJLLBdmxHI3LjWUYak4qpdoZuzIneZBY2zfFVC2xbF+R1e/um5lUtYw774MRtrmZtHq6q0b7SD56dlnK5GJtqZiF18+5ejwwNISSUijBgGebGBzOY92qsn5318IQ2SkFFLxQvxMfGVeMwfGvv2X1uG1+gDdGi3p8Y7Sk/1esznXx6ktpPW5bEOBN7hE3ov2W35vHjOkBvvCUBy8M0d5YC/dyBk8+5SKdApavHcaoH6Aq7uLYy46O8eEWIOT6Wa0ekkmlcQa1Ec6lS8roPxXDlZshWpJJ3N4iOQOKyRHMzqZQNZzCie5qlBnTZoyinF0ejgsxYMXqIUzMheh63MPg1TLmp2uwuDaDif4EHHghAS8I4dC3YmnmIBOzUSgzR8xPxWpsC7lUAjGbQces1rGxLNeA43/IoN51MHVmoOf9dB6zeNgJozU405tCvlzGb/5ka5+2bAZZx8Ut8sTmz/fx3WdiEBylMEDctBB6AWpI7H0rPWz9WrTpxvtDXGUweedCwXTeByNWIfPwiRDXSp72E5NkVywkKZXf4nfd93XSxFavKOE/7xg4e8lHayap40kyz51M6Pedy02cp8CKoY+X/mrpuY93mBhBiDUry9j/x7G51QEKQYAFFNHvegxQyaD60X8yOjaVjy2fLOjElwsWE0M8PLtBAZWJzzV4LhLQsTTAzWHglcEAc5m4JHF7oYIqBxj4u4vmVDVi43IQ8t0tGzc0DRMOJ8aOqc0UgXgeUlkTkxJxDJy29XyEbRSuxXMNmWjgnnHHxAe4l02MoeRdHBe2GOjeHVWKUxViSqJKEybJEWI+NM/HSN7Avpc9HKeCP/ugCc/xdEIlsYWSrzcUE9o+RqJPn3HwnT0hGuNxPT8U+LheiKpQm2mgfdkwBk5Z2i9rWZpMEYOo3GcC2B5gBJFyXR5SqvzyuzFka4ArxZIW17kLJt4k0R2LWDFWiUT5eGRngLPnoXEO2UU998vDARpYEWIXXo9h+84Erg8Bn97o4+vfHIZHIqpiJgwmy6PYqrl3SQWaSMFzjb5CfMxUupakQkvEKOdP07dCiODo/zXw3M/y2Lt7BHuf5cIx8ymIEsXgGJGz+PY9r/Dznw5romxW5qV/mtj+7bjGtonYvrLjpt4vYVJQHLncSyqXSCPy+l9TuKPLx45dCjseVtiwJkCCLEvFjLLtdW3wkGsM8cp+E7OnR1W1dpWHitayVIyYgDlN4F/6fBEvHA7B+wTTql1NcibhwhhTpz4gQX+Rfgd6olabI8kiFqeqRhM0dRKQYYuUtSKgTBWVR7KqKa5Tr0lBhNpfSD161MG0SQYe21JGd6+Fa14ZB/8S1yQ/yrkLF2N4g+2uQSqLJvGO99ro2hZH9wmFJW0K0xfnNRlFnpkhESeJAUVZLHh457Kp8dSlWSWck0qRBErFSuWkx3WUw4w3dV0Z0/jc9gAf/r9lFKxhxXQ7Fav43tEV4M9nivgHy9tJpHC2L4lPbEtobHcTW3PbMNLMn82M3xguINTrxypPLEnl9/UwW7T2e3wMkjQ55KTJJqbz/pnbqTBjvY+GDlYQW4io+tJYJUkSxQRMM8Hs71b4xmM+NtwTj1oeW7CY83+gD9Dvcfqtu9PSJEhi3r3yHl4kAWL3L1NaIELaENtqtoHtJaWwj8JIUqWVdnyoNxLFZx4w8OMDrDCSdIQxhohzC3E+fyjUlSSVI2JYvCjCnb/i4Fs7q/W4MRfgKkmJkxTlEycJ1NcB1/WM4fnUOlaPlBj/Alaqx3GO64rENjruTpe7bWEqheW5RizKRve6mEl/xUeqvGIi8FlWBmdfTLPrGJjTegWjvGpGrrl48okIW32jj4v8Jigxz7K+4Jc1jv+589zqKKjcQZfyZJjJ6WQVHh+I4a0bPj6SzeJOPseOuVrprXNLOhnjTcD85Icp9J4EnthexMx5nq668a1VTPz27s7Sz8D3dvjaTyrTYPL2/MrG4NtcvzWGptt8XM7n9X24+aFR9BHLzj0Bcqz2SlX++6KFt9g6+19VOHimhDrG8PIm78OoTT57kHMkVD6GRCSPbC4hTHhy+2By0/uCGiEJBSa2yLb2XqGsSYwz/nP7HLZnQ+NZ31mAyfhicvJHt/GjiPfq+DRIS7NZYTdLJVhORLw24Z0fN/FEhIvfSjBZjSKUB9cGmDExgYfZKUbY6kMSeHtztLaCTeNxeb0wn6YB/Bdgr9xFghmUhgAAAABJRU5ErkJggg==")
 
 /***/ }),
 
@@ -3067,24 +3079,24 @@ module.exports=(__webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/bas
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "debug": () => (/* binding */ debug),
-/* harmony export */   "debugout": () => (/* binding */ debugout),
-/* harmony export */   "debugFont": () => (/* binding */ debugFont),
-/* harmony export */   "unblendBlackBackground": () => (/* binding */ unblendBlackBackground),
-/* harmony export */   "unblendKnownBg": () => (/* binding */ unblendKnownBg),
-/* harmony export */   "unblendTrans": () => (/* binding */ unblendTrans),
+/* harmony export */   "GetChatColorMono": () => (/* binding */ GetChatColorMono),
 /* harmony export */   "canblend": () => (/* binding */ canblend),
+/* harmony export */   "debug": () => (/* binding */ debug),
+/* harmony export */   "debugFont": () => (/* binding */ debugFont),
+/* harmony export */   "debugout": () => (/* binding */ debugout),
 /* harmony export */   "decompose2col": () => (/* binding */ decompose2col),
-/* harmony export */   "decomposeblack": () => (/* binding */ decomposeblack),
 /* harmony export */   "decompose3col": () => (/* binding */ decompose3col),
+/* harmony export */   "decomposeblack": () => (/* binding */ decomposeblack),
 /* harmony export */   "findChar": () => (/* binding */ findChar),
 /* harmony export */   "findReadLine": () => (/* binding */ findReadLine),
-/* harmony export */   "GetChatColorMono": () => (/* binding */ GetChatColorMono),
+/* harmony export */   "generatefont": () => (/* binding */ generatefont),
 /* harmony export */   "getChatColor": () => (/* binding */ getChatColor),
+/* harmony export */   "readChar": () => (/* binding */ readChar),
 /* harmony export */   "readLine": () => (/* binding */ readLine),
 /* harmony export */   "readSmallCapsBackwards": () => (/* binding */ readSmallCapsBackwards),
-/* harmony export */   "readChar": () => (/* binding */ readChar),
-/* harmony export */   "generatefont": () => (/* binding */ generatefont)
+/* harmony export */   "unblendBlackBackground": () => (/* binding */ unblendBlackBackground),
+/* harmony export */   "unblendKnownBg": () => (/* binding */ unblendKnownBg),
+/* harmony export */   "unblendTrans": () => (/* binding */ unblendTrans)
 /* harmony export */ });
 /* harmony import */ var _alt1_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js");
 
@@ -3875,15 +3887,45 @@ secondary:!1}],width:10,spacewidth:3,shadow:!0,height:12,basey:8}}],e={},functio
 
 /***/ }),
 
-/***/ "../node_modules/canvas/browser.js":
-/*!*****************************************!*\
-  !*** ../node_modules/canvas/browser.js ***!
-  \*****************************************/
+/***/ "../node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./appconfig.json":
+/*!**********************************************************************************!*\
+  !*** ../node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./appconfig.json ***!
+  \**********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "appconfig.json");
+
+/***/ }),
+
+/***/ "../node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./index.html":
+/*!******************************************************************************!*\
+  !*** ../node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./index.html ***!
+  \******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "index.html");
+
+/***/ }),
+
+/***/ "../node_modules/resemblejs/node_modules/canvas/browser.js":
+/*!*****************************************************************!*\
+  !*** ../node_modules/resemblejs/node_modules/canvas/browser.js ***!
+  \*****************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 /* globals document, ImageData */
 
-const parseFont = __webpack_require__(/*! ./lib/parse-font */ "../node_modules/canvas/lib/parse-font.js")
+const parseFont = __webpack_require__(/*! ./lib/parse-font */ "../node_modules/resemblejs/node_modules/canvas/lib/parse-font.js")
 
 exports.parseFont = parseFont
 
@@ -3920,10 +3962,10 @@ exports.loadImage = function (src, options) {
 
 /***/ }),
 
-/***/ "../node_modules/canvas/lib/parse-font.js":
-/*!************************************************!*\
-  !*** ../node_modules/canvas/lib/parse-font.js ***!
-  \************************************************/
+/***/ "../node_modules/resemblejs/node_modules/canvas/lib/parse-font.js":
+/*!************************************************************************!*\
+  !*** ../node_modules/resemblejs/node_modules/canvas/lib/parse-font.js ***!
+  \************************************************************************/
 /***/ ((module) => {
 
 "use strict";
@@ -4032,36 +4074,6 @@ module.exports = str => {
 
 /***/ }),
 
-/***/ "../node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./appconfig.json":
-/*!**********************************************************************************!*\
-  !*** ../node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./appconfig.json ***!
-  \**********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "appconfig.json");
-
-/***/ }),
-
-/***/ "../node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./index.html":
-/*!******************************************************************************!*\
-  !*** ../node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./index.html ***!
-  \******************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "index.html");
-
-/***/ }),
-
 /***/ "../node_modules/resemblejs/resemble.js":
 /*!**********************************************!*\
   !*** ../node_modules/resemblejs/resemble.js ***!
@@ -4133,7 +4145,7 @@ var isNode = function () {
     var loadNodeCanvasImage;
 
     if (isNode()) {
-        Canvas = __webpack_require__(/*! canvas */ "../node_modules/canvas/browser.js"); // eslint-disable-line global-require
+        Canvas = __webpack_require__(/*! canvas */ "../node_modules/resemblejs/node_modules/canvas/browser.js"); // eslint-disable-line global-require
         Img = Canvas.Image;
         loadNodeCanvasImage = Canvas.loadImage;
     } else {
@@ -5270,10 +5282,10 @@ var __webpack_exports__ = {};
   \******************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "changesettings": () => (/* binding */ changesettings),
-/* harmony export */   "changerefresh": () => (/* binding */ changerefresh),
-/* harmony export */   "changeKC": () => (/* binding */ changeKC),
 /* harmony export */   "TunnelSelect": () => (/* binding */ TunnelSelect),
+/* harmony export */   "changeKC": () => (/* binding */ changeKC),
+/* harmony export */   "changerefresh": () => (/* binding */ changerefresh),
+/* harmony export */   "changesettings": () => (/* binding */ changesettings),
 /* harmony export */   "start": () => (/* binding */ start)
 /* harmony export */ });
 /* harmony import */ var _alt1_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js");
@@ -5479,10 +5491,7 @@ function changerefresh(refresh) {
 }
 ;
 function changeKC(KC) {
-    console.log("changeKC");
-    console.log(KC);
     localStorage.setItem("barrowsKC", KC.value);
-    console.log(BarrowsKC);
     BarrowsKC = parseInt(localStorage.barrowsKC);
     start();
     return;
@@ -5928,7 +5937,7 @@ function getDiffCT(img) {
 }
 function chest(img) {
     var chestloc = img.findSubimage(chestimg.chest);
-    //only run if door lock window is on screen, saves on performance
+    //only run if chest loot window is on screen, saves on performance
     if (window.alt1) {
         if (chestloc.length != 0) {
             tunnelglbl3 = "None";
