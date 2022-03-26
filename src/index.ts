@@ -37,7 +37,6 @@ const appColor = a1lib.mixColor(0, 255, 0);
 var droprate = 0
 var Linzakill = 0
 
-
 //Chat reader stuff
 let reader = new Chatbox.default();
 reader.readargs = {
@@ -102,12 +101,14 @@ function readChatbox() {
 	for (const a in opts) {
 	  chat += opts[a].text + " ";
 	}  
+	
 	  var comps = chat.match(
 		"The chest is now empty"
 		);
 		//add 1 to kc and localstorage for kc. 
 		if (comps != null)
 		{
+			
 		  if (comps[1] = "The chest is now empty") {
 			BarrowsKC ++
 			
@@ -275,12 +276,9 @@ export function changerefresh(refresh) {
 };
 
 export function changeKC(KC) {
-	 console.log("changeKC")
-	 console.log(KC)
    
 	localStorage.setItem("barrowsKC",KC.value);
 	
-	console.log(BarrowsKC)
 	BarrowsKC = parseInt(localStorage.barrowsKC);
 	
 	start()
@@ -871,7 +869,7 @@ function chest(img) //finds reward chest, used to reset tunnel green image
 {
 	var chestloc = img.findSubimage(chestimg.chest);	
 	
-	//only run if door lock window is on screen, saves on performance
+	//only run if chest loot window is on screen, saves on performance
 	if (window.alt1) {
 		if (chestloc.length != 0) {
 			tunnelglbl3 = "None"
