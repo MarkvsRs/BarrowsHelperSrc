@@ -654,7 +654,7 @@ function getDiffCoTo(img:ImgRef){
 				.ignoreColors()
 				.ignoreAntialiasing()
 				.onComplete(function (data) {				
-					if (parseInt(data.misMatchPercentage) < 10 )
+					if (data.misMatchPercentage < 10 )
 						{
 						//display border
 						alt1.overLayRect(a1lib.mixColor(0, 255, 0), (Doorloc[0].x +46),(Doorloc[0].y +214), (puzzleimgsCoTo[key]['width']+4), (puzzleimgsCoTo[key]['height']+4), 300, 3);
@@ -669,7 +669,7 @@ function getDiffCoTo(img:ImgRef){
 				.ignoreColors()
 				.ignoreAntialiasing()
 				.onComplete(function (data) {
-					if (parseInt(data.misMatchPercentage) < 10 )
+					if (data.misMatchPercentage < 10 )
 						{
 						//display border							
 						alt1.overLayRect(a1lib.mixColor(0, 255, 0), (Doorloc[0].x +189),(Doorloc[0].y +214), (puzzleimgsCoTo[key]['width']+4), (puzzleimgsCoTo[key]['height']+4), 300, 3);
@@ -684,7 +684,7 @@ function getDiffCoTo(img:ImgRef){
 				.ignoreColors()
 				.ignoreAntialiasing()
 				.onComplete(function (data) {				
-					if (parseInt(data.misMatchPercentage) < 10 )
+					if (data.misMatchPercentage < 10 )
 						{						
 						alt1.overLayRect(a1lib.mixColor(0, 255, 0), (Doorloc[0].x +332),(Doorloc[0].y +214), (puzzleimgsCoTo[key]['width']+4), (puzzleimgsCoTo[key]['height']+4), 300, 3);
 						}
@@ -736,7 +736,7 @@ function getDiffSq(img:ImgRef){
 				.ignoreColors()
 				.ignoreAntialiasing()
 				.onComplete(function (data) {				
-					if (parseInt(data.misMatchPercentage) < 10 )
+					if (data.misMatchPercentage < 10 )
 						{
 						//display border
 						alt1.overLayRect(a1lib.mixColor(0, 255, 0), (DoorlocSq[0].x +57),(DoorlocSq[0].y +225), (puzzleimgsSq[key]['width']+4), (puzzleimgsSq[key]['height']+4), 300, 3);
@@ -751,7 +751,7 @@ function getDiffSq(img:ImgRef){
 				.ignoreColors()
 				.ignoreAntialiasing()
 				.onComplete(function (data) {
-					if (parseInt(data.misMatchPercentage) < 10 )
+					if (data.misMatchPercentage < 10 )
 						{
 						//display border							
 						alt1.overLayRect(a1lib.mixColor(0, 255, 0), (DoorlocSq[0].x +200),(DoorlocSq[0].y +225), (puzzleimgsSq[key]['width']+4), (puzzleimgsSq[key]['height']+4), 300, 3);
@@ -766,7 +766,7 @@ function getDiffSq(img:ImgRef){
 				.ignoreColors()
 				.ignoreAntialiasing()
 				.onComplete(function (data) {				
-					if (parseInt(data.misMatchPercentage) < 10 )
+					if (data.misMatchPercentage < 10 )
 						{						
 						alt1.overLayRect(a1lib.mixColor(0, 255, 0), (DoorlocSq[0].x +343),(DoorlocSq[0].y +225), (puzzleimgsSq[key]['width']+4), (puzzleimgsSq[key]['height']+4), 300, 3);
 						}
@@ -818,7 +818,7 @@ function getDiffCT(img:ImgRef){
 				.ignoreColors()
 				.ignoreAntialiasing()
 				.onComplete(function (data) {				
-					if (parseInt(data.misMatchPercentage) < 10 )
+					if (data.misMatchPercentage < 10 )
 						{
 						//display border
 						alt1.overLayRect(a1lib.mixColor(0, 255, 0), (DoorlocSq[0].x +41),(DoorlocSq[0].y +227), (puzzleimgsCT[key]['width']+4), (puzzleimgsCT[key]['height']+4), 300, 3);
@@ -833,7 +833,7 @@ function getDiffCT(img:ImgRef){
 				.ignoreColors()
 				.ignoreAntialiasing()
 				.onComplete(function (data) {
-					if (parseInt(data.misMatchPercentage) < 10 )
+					if (data.misMatchPercentage < 10 )
 						{
 						//display border							
 						alt1.overLayRect(a1lib.mixColor(0, 255, 0), (DoorlocSq[0].x +184),(DoorlocSq[0].y +227), (puzzleimgsCT[key]['width']+4), (puzzleimgsCT[key]['height']+4), 300, 3);
@@ -848,7 +848,7 @@ function getDiffCT(img:ImgRef){
 				.ignoreColors()
 				.ignoreAntialiasing()
 				.onComplete(function (data) {				
-					if (parseInt(data.misMatchPercentage) < 10 )
+					if (data.misMatchPercentage < 10 )
 						{						
 						alt1.overLayRect(a1lib.mixColor(0, 255, 0), (DoorlocSq[0].x +326),(DoorlocSq[0].y +227), (puzzleimgsCT[key]['width']+4), (puzzleimgsCT[key]['height']+4), 300, 3);
 						}
