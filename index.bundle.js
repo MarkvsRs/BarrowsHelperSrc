@@ -3026,7 +3026,7 @@ module.exports=(__webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/bas
   \*****************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports=(__webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js").ImageDetect.imageDataFromBase64)("iVBORw0KGgoAAAANSUhEUgAAAHYAAAAKCAYAAABhR6qrAAAAAW5vUEUAYtdMlAAAAARub1BFAAAAAEEgjiIAAAAJbm9QRQAAAAAAAAAAAKGKctUAAAfsSURBVFhHtZcJVJTXFcf/M8MAA8g2gGETRNkRxAUihCBqNOIWoS61scLRolg9KW6xVBEBN6IRjyEmsaa1iY0KlWO1anqaRU1ybOVgXAAFQSxIoOxhm2Gcmb535xuYAYaE0/R3zpx33/3u97775r13730iK69ALRhTIl5Eatp2LuL2N19hgl8Aaqof4/xHf0RLcxPpf0rsHR3R0dYGrZY+349IJIKdgwPaW1sFzegRi8Wwtbf/n8b4f2NuYYE+pVLo/fT0Lyzn5Cd/ofYXUUHwnx6NjGMnUVl6F4cyd0NkJsUEX3/szNpPNv+4ehl+AUFQqVQ4e/oU2wRVpOc4yp2wKHE5pFIpbQq5kzP6VH24VHgeba0tZHPs1J9Q97QGlQ/LsWDpz0j3t6JCtqH8ERA8CeuWL0HApDBs251Fz3L37iJb34BA7NiTQ7rD2RnU6m2uXiyCSCxCaPg0uHl40BgTA4J/0OeJ/oFYlbwO9bX/Zu+L2ftTsTV17bB//Ei2/kHB/b4cycnEw9L7JA9m/ERfBIaE4kpRAVsBMemC2FzT0nXzObo/C7VPn2D+4gQUnDlttPn9AoOwPSOb5CM5e9g3HpA8GN2ow9DQ3kWtu5cPlM3PSK6qfEQt5w/ZO5C3ZzstRHJKKjR9CtI7u4xFZu5R2NrZ4b2cdJzLP4z3D2RgjEyGvblvQy53JLvOjg6cyNiCs8cPUp/z57cykJ+Vjg62+L11lXhUVio8Ae5+egEaZQ8trp47VwtRVnJb6AEfH/odzr57BHm7t1Gfj/FjfF6TshGtTY14Z9dvkM+ev3dwDzoe3wO0GnpuyEi2hv6WXDkPtaJb6Bkza1485sxfAJHB87L7dwUJKL58Fh1NDXhlwSKs3/QGnW49FeVlgsS/UcC+0YPkDZuQnLpZ0OowubCeXt7UVt7/Flp22oZDZSaj1lJmhb7mepKXrU6CzMoKRSfzoGbvmTu5QWIrx6fXrkBmbYPEZSugfa7Cri2b0fSfRljI3eg9PQqxOZ0AkcRM0AwgtrASpAEklsY6qb0L2pXPsX19kqAxZjifJRIxgsOmYGnSBli7eaO0ogrm3C/hNBkyKltLa0EawNHJiU72GFs7RM+cyTaEcSrSo5/r1KgYvLHtTdjZ2VJ/MHz+PHXZWsvQ16KbD2fYhfXw8cXy15Og0WhQfuc2pFY2wpMBpOYWtPM4X14qZBtWt7t9JvpRW/u4AlI7J5I5z1jo4viGhKGvrZFkmdsECvGDEYklkHn4Cr3RExIWjvbvO4eMYcrni4Xn2IJJkJCUgn1vH0fUyzMhsRpDzwYzGtvhmBu/GO8fzUVvdzcW/jwZWoUuMo7EJ++8hU1b34Sbm7ugMSbvQDZyd2yCVv1c0JhY2LrqSuxP34oPDmVi5cYt+NXOvUxrvLNe8PTCwoRlKP76Oi58+C7MbOyEJzp4ESSSDoQQ1uuXNMpeQf7xJKz9NeVt/jPFitQ0pGxOQ1BoGNS9XUNOvSmf//nVDezfmYbaqgo4sPqAh7UlSxPp2WBGYzsYaxsbuLi6ovxfX+Ob659BPtYV0yMiTZ5aPRX3SvBB3mEkr9+IwKAgQWuMhcs4+ukxGYrFbFHKKqtJDo+MYmHrO5L18InduvEFpkXHIn51CguBzqSvFnIaP/WGuHl6Ult5/w61o+XCqXxaDP4zxbkTR5Gf/Vtc/6suv5mx4s0QUz7zQqumtg5ZO7fiWsEZ0r0891Wo2ofeBkZjq8eOVeicuLnzoejtxWur1kAsRKqFq5Kh7ukkeSSaWttw7FAOFixJEDQjY3JhOYGsUuNUlz9gJ2Dox69dvsiqQQUS16TAwUp3Ogs+Po2e7i4sYTqRRhcaxCx0xb+WiN6ebpxhYUVsoctzo4WHdsPwPhw8xza0d0Pu7o2YuDlDTsNwPq/85Vr2R7CwbGaOL2/cIF19TTWed7WRbMhobDk8ckXFxkHKcjO/Up7YtwtFH53C6byDqHhwD+7ePggLDRWsR6arpxfHcg+g+Obn1OdVOWf1ug30M0TCdm0mFyZPi0BE1EukdHR2waIVryN8eiRuXf8cHx7cDTWbTkhkNMspcWTDc299Uysel5fCy9sbU9ipfsLyakNDA3vnC4zz9EBEdAx82PXgpdhZ6O7qxPGMbWiur4WFsyflUQ4v0mLnzCO5hDncrSaRCAyZhBksh3Hu3bqJzj4NXRViZrEFYzz6thguXhMQzcbn8NwXPPVFzHxlHlasWYubn/0ddtaWiJ6tG9+Uz2Ys986eM5d8jWOnr/JhGX6/Lx1KtYaFa91p08PDrynboOlRRr6ERkRh8bKVaG1pweTJ4azIkePmpQJIndypbpk0hV/LPDHeLxAKdhjCI2fQuzz0uvr4Y0ZMLPUf3ilGe6/u6qVhG7XkNqt72IpUPWCFrWwMZr8aD0tzMzZ2YX++N7rH8pCgbKojmU9Io1JSQpbIbChs8cXg5bWy8SnZWIz1oqqM61S8IGK701zuSmFcq1ax8NTMDoyGnVgpNKwvYpWj1N6J5T7jEMmvHYrvnpBs6ToeYnNLkjk8pCobdYWX5QvedNp5jlY01JDOYuw4yt8KwSf9idawilzD3uVVOa9Yf8hnPnfuBy/meMt9ljq4DFudqzqaTdpq2LhGvrCFULNrGq+QtRo12VsyH/h3OcqmZ+zb37OxzJm9nFW2upTH58XRz13vtyG8COXf4OsyYMffA/4LtwNc3JBR/WIAAAAASUVORK5CYII=")
+module.exports=(__webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js").ImageDetect.imageDataFromBase64)("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")
 
 /***/ }),
 
@@ -5779,7 +5779,7 @@ function getDiffCoTo(img) {
                     .ignoreColors()
                     .ignoreAntialiasing()
                     .onComplete(function (data) {
-                    if (parseInt(data.misMatchPercentage) < 10) {
+                    if (data.misMatchPercentage < 10) {
                         //display border
                         alt1.overLayRect(_alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor(0, 255, 0), (Doorloc[0].x + 46), (Doorloc[0].y + 214), (puzzleimgsCoTo[key]['width'] + 4), (puzzleimgsCoTo[key]['height'] + 4), 300, 3);
                     }
@@ -5791,7 +5791,7 @@ function getDiffCoTo(img) {
                     .ignoreColors()
                     .ignoreAntialiasing()
                     .onComplete(function (data) {
-                    if (parseInt(data.misMatchPercentage) < 10) {
+                    if (data.misMatchPercentage < 10) {
                         //display border							
                         alt1.overLayRect(_alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor(0, 255, 0), (Doorloc[0].x + 189), (Doorloc[0].y + 214), (puzzleimgsCoTo[key]['width'] + 4), (puzzleimgsCoTo[key]['height'] + 4), 300, 3);
                     }
@@ -5803,7 +5803,7 @@ function getDiffCoTo(img) {
                     .ignoreColors()
                     .ignoreAntialiasing()
                     .onComplete(function (data) {
-                    if (parseInt(data.misMatchPercentage) < 10) {
+                    if (data.misMatchPercentage < 10) {
                         alt1.overLayRect(_alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor(0, 255, 0), (Doorloc[0].x + 332), (Doorloc[0].y + 214), (puzzleimgsCoTo[key]['width'] + 4), (puzzleimgsCoTo[key]['height'] + 4), 300, 3);
                     }
                     //compareimg(data)
@@ -5840,7 +5840,7 @@ function getDiffSq(img) {
                     .ignoreColors()
                     .ignoreAntialiasing()
                     .onComplete(function (data) {
-                    if (parseInt(data.misMatchPercentage) < 10) {
+                    if (data.misMatchPercentage < 10) {
                         //display border
                         alt1.overLayRect(_alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor(0, 255, 0), (DoorlocSq[0].x + 57), (DoorlocSq[0].y + 225), (puzzleimgsSq[key]['width'] + 4), (puzzleimgsSq[key]['height'] + 4), 300, 3);
                     }
@@ -5852,7 +5852,7 @@ function getDiffSq(img) {
                     .ignoreColors()
                     .ignoreAntialiasing()
                     .onComplete(function (data) {
-                    if (parseInt(data.misMatchPercentage) < 10) {
+                    if (data.misMatchPercentage < 10) {
                         //display border							
                         alt1.overLayRect(_alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor(0, 255, 0), (DoorlocSq[0].x + 200), (DoorlocSq[0].y + 225), (puzzleimgsSq[key]['width'] + 4), (puzzleimgsSq[key]['height'] + 4), 300, 3);
                     }
@@ -5864,7 +5864,7 @@ function getDiffSq(img) {
                     .ignoreColors()
                     .ignoreAntialiasing()
                     .onComplete(function (data) {
-                    if (parseInt(data.misMatchPercentage) < 10) {
+                    if (data.misMatchPercentage < 10) {
                         alt1.overLayRect(_alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor(0, 255, 0), (DoorlocSq[0].x + 343), (DoorlocSq[0].y + 225), (puzzleimgsSq[key]['width'] + 4), (puzzleimgsSq[key]['height'] + 4), 300, 3);
                     }
                     //compareimg(data)
@@ -5901,7 +5901,7 @@ function getDiffCT(img) {
                     .ignoreColors()
                     .ignoreAntialiasing()
                     .onComplete(function (data) {
-                    if (parseInt(data.misMatchPercentage) < 10) {
+                    if (data.misMatchPercentage < 10) {
                         //display border
                         alt1.overLayRect(_alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor(0, 255, 0), (DoorlocSq[0].x + 41), (DoorlocSq[0].y + 227), (puzzleimgsCT[key]['width'] + 4), (puzzleimgsCT[key]['height'] + 4), 300, 3);
                     }
@@ -5913,7 +5913,7 @@ function getDiffCT(img) {
                     .ignoreColors()
                     .ignoreAntialiasing()
                     .onComplete(function (data) {
-                    if (parseInt(data.misMatchPercentage) < 10) {
+                    if (data.misMatchPercentage < 10) {
                         //display border							
                         alt1.overLayRect(_alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor(0, 255, 0), (DoorlocSq[0].x + 184), (DoorlocSq[0].y + 227), (puzzleimgsCT[key]['width'] + 4), (puzzleimgsCT[key]['height'] + 4), 300, 3);
                     }
@@ -5925,7 +5925,7 @@ function getDiffCT(img) {
                     .ignoreColors()
                     .ignoreAntialiasing()
                     .onComplete(function (data) {
-                    if (parseInt(data.misMatchPercentage) < 10) {
+                    if (data.misMatchPercentage < 10) {
                         alt1.overLayRect(_alt1_base__WEBPACK_IMPORTED_MODULE_0__.mixColor(0, 255, 0), (DoorlocSq[0].x + 326), (DoorlocSq[0].y + 227), (puzzleimgsCT[key]['width'] + 4), (puzzleimgsCT[key]['height'] + 4), 300, 3);
                     }
                     //compareimg(data)
