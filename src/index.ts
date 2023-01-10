@@ -759,7 +759,7 @@ function getDiffSq(img:ImgRef){
 					//compareimg(data)
 				}	
 				);
-					
+					 
 				//Compare data stream of right puzzle location with image from object, Less than 10% mismatch results in success
 				resemble(buf3)
 				.compareTo(puzzleimgsSq[key])
