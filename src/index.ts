@@ -409,7 +409,7 @@ function atbarrows(img: ImgRef){
 				//brotherList = fullbrotherList
 				//reset brocount (used so that the count doesn't go out of control after each run/tele out)	
 				brocount = 0;
-
+ 
 
 				//whilst not at barrows shove the refresh rate down a tonne to save on cpu and idel players
 				if (refreshrate < 5000)
