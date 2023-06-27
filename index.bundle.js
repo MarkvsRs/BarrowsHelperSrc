@@ -3026,7 +3026,7 @@ module.exports=(__webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/bas
   \*****************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports=(__webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js").ImageDetect.imageDataFromBase64)("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")
+module.exports=(__webpack_require__(/*! @alt1/base */ "../node_modules/@alt1/base/dist/index.js").ImageDetect.imageDataFromBase64)("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")
 
 /***/ }),
 
@@ -3887,45 +3887,15 @@ secondary:!1}],width:10,spacewidth:3,shadow:!0,height:12,basey:8}}],e={},functio
 
 /***/ }),
 
-/***/ "../node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./appconfig.json":
-/*!**********************************************************************************!*\
-  !*** ../node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./appconfig.json ***!
-  \**********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "appconfig.json");
-
-/***/ }),
-
-/***/ "../node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./index.html":
-/*!******************************************************************************!*\
-  !*** ../node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./index.html ***!
-  \******************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "index.html");
-
-/***/ }),
-
-/***/ "../node_modules/resemblejs/node_modules/canvas/browser.js":
-/*!*****************************************************************!*\
-  !*** ../node_modules/resemblejs/node_modules/canvas/browser.js ***!
-  \*****************************************************************/
+/***/ "../node_modules/canvas/browser.js":
+/*!*****************************************!*\
+  !*** ../node_modules/canvas/browser.js ***!
+  \*****************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 /* globals document, ImageData */
 
-const parseFont = __webpack_require__(/*! ./lib/parse-font */ "../node_modules/resemblejs/node_modules/canvas/lib/parse-font.js")
+const parseFont = __webpack_require__(/*! ./lib/parse-font */ "../node_modules/canvas/lib/parse-font.js")
 
 exports.parseFont = parseFont
 
@@ -3962,10 +3932,10 @@ exports.loadImage = function (src, options) {
 
 /***/ }),
 
-/***/ "../node_modules/resemblejs/node_modules/canvas/lib/parse-font.js":
-/*!************************************************************************!*\
-  !*** ../node_modules/resemblejs/node_modules/canvas/lib/parse-font.js ***!
-  \************************************************************************/
+/***/ "../node_modules/canvas/lib/parse-font.js":
+/*!************************************************!*\
+  !*** ../node_modules/canvas/lib/parse-font.js ***!
+  \************************************************/
 /***/ ((module) => {
 
 "use strict";
@@ -4074,6 +4044,36 @@ module.exports = str => {
 
 /***/ }),
 
+/***/ "../node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./appconfig.json":
+/*!**********************************************************************************!*\
+  !*** ../node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./appconfig.json ***!
+  \**********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "appconfig.json");
+
+/***/ }),
+
+/***/ "../node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./index.html":
+/*!******************************************************************************!*\
+  !*** ../node_modules/file-loader/dist/cjs.js?name=[name].[ext]!./index.html ***!
+  \******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "index.html");
+
+/***/ }),
+
 /***/ "../node_modules/resemblejs/resemble.js":
 /*!**********************************************!*\
   !*** ../node_modules/resemblejs/resemble.js ***!
@@ -4145,7 +4145,7 @@ var isNode = function () {
     var loadNodeCanvasImage;
 
     if (isNode()) {
-        Canvas = __webpack_require__(/*! canvas */ "../node_modules/resemblejs/node_modules/canvas/browser.js"); // eslint-disable-line global-require
+        Canvas = __webpack_require__(/*! canvas */ "../node_modules/canvas/browser.js"); // eslint-disable-line global-require
         Img = Canvas.Image;
         loadNodeCanvasImage = Canvas.loadImage;
     } else {
