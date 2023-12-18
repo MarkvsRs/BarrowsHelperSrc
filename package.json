@@ -4,10 +4,20 @@
 		"watch": "npm run build -- --watch"
 	},
 	"dependencies": {
+		"@alt1/ability": "^1.0.0-alpha.6",
+		"@alt1/abilitytooltip": "^1.0.0-alpha.6",
+		"@alt1/animal": "^1.0.0-alpha.6",
 		"@alt1/base": "^1.0.0-alpha.2",
+		"@alt1/bosstimer": "^1.0.0-alpha.6",
+		"@alt1/buffs": "^1.0.0-alpha.6",
 		"@alt1/chatbox": "^1.0.0-alpha.3",
+		"@alt1/datapng-loader": "^1.0.0-alpha.6",
+		"@alt1/dialog": "^1.0.0-alpha.7",
+		"@alt1/dropsmenu": "^1.0.0-alpha.6",
 		"@alt1/font-loader": "^1.0.0-alpha.2",
 		"@alt1/ocr": "^1.0.0-alpha.2",
+		"@alt1/targetmob": "^1.0.0-alpha.6",
+		"@alt1/tooltip": "^1.0.0-alpha.6",
 		"jquery": "^3.6.0",
 		"jsdom": "^19.0.0"
 	},
